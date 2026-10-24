@@ -28,6 +28,85 @@ test('first fetch failure and subsequent refresh failure are honest',async({page
 function responseFor(date) {
   return {schema_version:2,service_date:date,venues:[{id:'test',name:'Test cinema',coordinates:[14.4,50.1]}],snapshots:[{venue_id:'test',generation:new Date().toISOString(),checked_at:new Date().toISOString(),dates:[date],screenings:[{id:date,title:'Film for '+date,starts_at:date+'T23:59:00+02:00',access:'english_audio',booking_url:'https://cinema.example/'}]}],attempts:[]};
 }
+for (const width of [320,390,700]) {
+  test(`mobile stays within ${width}px with long listings and expanded filters`,async({browser})=>{
+    const context=await browser.newContext({viewport:{width,height:844},isMobile:true,hasTouch:true});
+    const page=await context.newPage();
+    await page.clock.install({time:new Date('2026-10-24T17:00:00Z')});
+    await page.route('**/api/v1/snapshot*',route=>{
+      const data=responseFor('2026-10-24');
+      data.venues[0].name='Cinema'+ 'LongName'.repeat(30);
+      const row=data.snapshots[0].screenings[0];
+      row.title='LongTitle'.repeat(40);row.hall='LongHall'.repeat(30);
+      row.language_evidence='https://cinema.example/'+ 'evidence'.repeat(60);
+      return route.fulfill({json:data});
+    });
+    await page.goto('/');await expect(page.locator('table')).toBeVisible();
+    const date=page.locator('input[type=date]');const time=page.locator('input[type=time]');
+    await expect(date).toHaveCSS('appearance','none');await expect(time).toHaveCSS('appearance','none');
+    for (const control of [date,time]) {
+      const bounds=await control.evaluate(el=>({input:el.getBoundingClientRect().toJSON(),label:el.parentElement.getBoundingClientRect().toJSON()}));
+      expect(bounds.input.left).toBeGreaterThanOrEqual(bounds.label.left);
+      expect(bounds.input.right).toBeLessThanOrEqual(bounds.label.right);
+    }
+    const dateBox=await date.boundingBox();const timeBox=await time.boundingBox();
+    expect(dateBox.y).toBe(timeBox.y);expect(dateBox.x+dateBox.width).toBeLessThan(timeBox.x);
+    expect(Math.abs(dateBox.width-timeBox.width)).toBeLessThan(1);
+    await page.locator('.filter-bottom summary').click();
+    await page.locator('td details summary').click();
+    await page.locator('#coverage summary').click();
+    // Check content bounds as well as the root: clipping alone must not hide overflow.
+    for (const selector of ['.film-title','.meta','.venue-button','td details p','#coverage-content','input','select']) {
+      const bounds=await page.locator(selector).evaluateAll(elements=>elements.map(el=>({left:el.getBoundingClientRect().left,right:el.getBoundingClientRect().right,client:el.clientWidth,scroll:el.scrollWidth})));
+      for (const box of bounds) {
+        expect(box.left).toBeGreaterThanOrEqual(0);expect(box.right).toBeLessThanOrEqual(width);
+        expect(box.scroll).toBeLessThanOrEqual(box.client+1);
+      }
+    }
+    await page.evaluate(()=>window.scrollTo(120,400));
+    expect(await page.evaluate(()=>scrollX)).toBe(0);
+    expect(await page.evaluate(()=>scrollY)).toBeGreaterThan(0);
+    expect(await page.evaluate(()=>document.documentElement.scrollWidth)).toBeLessThanOrEqual(width);
+    await context.close();
+  });
+}
+test('mobile page scrolls and map pans without global gesture restrictions',async({browser,browserName})=>{
+  test.skip(browserName!=='chromium','Touch injection uses Chromium CDP');
+  const context=await browser.newContext({viewport:{width:390,height:844},isMobile:true,hasTouch:true});
+  const page=await context.newPage();
+  await page.goto('/?demo=1');await expect(page.locator('table')).toBeVisible();
+  for (const selector of ['html','body','main','#filters','#listings']) {
+    await expect(page.locator(selector)).toHaveCSS('touch-action','auto');
+    await expect(page.locator(selector)).toHaveCSS('overflow-x','visible');
+  }
+  const cdp=await context.newCDPSession(page);
+  async function swipe(x,y,dx,dy) {
+    await cdp.send('Input.dispatchTouchEvent',{type:'touchStart',touchPoints:[{x,y}]});
+    for (let step=1;step<=10;step++) {
+      await cdp.send('Input.dispatchTouchEvent',{type:'touchMove',touchPoints:[{x:x+dx*step/10,y:y+dy*step/10}]});
+    }
+    await cdp.send('Input.dispatchTouchEvent',{type:'touchEnd',touchPoints:[]});
+  }
+  await swipe(300,700,-220,0);
+  expect(await page.evaluate(()=>scrollX)).toBe(0);
+  await swipe(280,700,-100,-300);
+  await expect.poll(()=>page.evaluate(()=>scrollY)).toBeGreaterThan(100);
+  expect(await page.evaluate(()=>scrollX)).toBe(0);
+  await page.locator('#show-map').click();await expect(page.locator('.leaflet-container')).toBeVisible();
+  await page.locator('#map').scrollIntoViewIfNeeded();
+  // A pan-y rule on html/body/main would disable horizontal map dragging too.
+  for (const selector of ['html','body','main','.map-section']) {
+    await expect(page.locator(selector)).toHaveCSS('touch-action','auto');
+  }
+  const pane=page.locator('.leaflet-map-pane');
+  await expect(pane).not.toHaveClass(/leaflet-zoom-anim/);
+  const before=await pane.evaluate(el=>el.style.transform);
+  const box=await page.locator('#map').boundingBox();
+  await swipe(box.x+80,box.y+70,80,0);
+  await expect.poll(()=>pane.evaluate(el=>el.style.transform)).not.toBe(before);
+  expect(await page.evaluate(()=>scrollX)).toBe(0);
+  await context.close();
+});
 test('delayed A→B→A response never replaces cached A',async({page})=>{
   await page.clock.install({time:new Date('2026-10-24T17:00:00Z')});
   let delayed,release;const gate=new Promise(resolve=>release=resolve);
