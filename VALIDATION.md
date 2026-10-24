@@ -171,6 +171,9 @@ of model-cost savings, live free-tier headroom or production readiness are made.
   Workflow is active with ten-minute cron configured;
   no successful `schedule` event is yet evidenced. Personal refresh authentication
   successfully queued a real cloud job for the next collection.
+- Subsequent hosted run passed:
+  https://github.com/nandorocker/film-tonight/actions/runs/40134057381. Authenticated
+  job lookup then reported `complete` for that Hermes refresh request.
 
 ## Outstanding acceptance gates
 
