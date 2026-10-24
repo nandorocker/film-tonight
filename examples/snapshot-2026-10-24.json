@@ -1,0 +1,2095 @@
+{
+  "service_date": "2026-10-24",
+  "observed_at": "2026-10-24T17:55:00+02:00",
+  "provenance": "Hand-compiled findings from this conversation. Demonstration data only; not a reproducible collector run.",
+  "venues": [
+    {
+      "venue_id": "kino-aero",
+      "source_url": "https://www.kinoaero.cz/en",
+      "screenings": [
+        {
+          "id": "kino-aero-if-pigeons-turned-to-gold-20-00-english-subtitles",
+          "title": "If Pigeons Turned to Gold",
+          "starts_at": "2026-10-24T20:00:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "english_subtitles",
+          "language_evidence": {
+            "manual_note": "English subtitles"
+          },
+          "price": "180 Kč",
+          "currency": "CZK",
+          "booking_url": "https://www.kinoaero.cz/en",
+          "availability_reported": null
+        }
+      ]
+    },
+    {
+      "venue_id": "cinema-city-flora",
+      "source_url": "https://www.cinemacity.cz/cinemas/flora/1052?lang=en_GB",
+      "screenings": [
+        {
+          "id": "cinema-city-flora-clayface-19-20-english-audio-czech-subtitles",
+          "title": "Clayface",
+          "starts_at": "2026-10-24T19:20:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "english_audio",
+          "language_evidence": {
+            "manual_note": "English audio · Czech subtitles"
+          },
+          "price": null,
+          "currency": null,
+          "booking_url": "https://www.cinemacity.cz/cinemas/flora/1052?lang=en_GB",
+          "availability_reported": null
+        },
+        {
+          "id": "cinema-city-flora-clayface-21-40-english-audio-czech-subtitles",
+          "title": "Clayface",
+          "starts_at": "2026-10-24T21:40:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "english_audio",
+          "language_evidence": {
+            "manual_note": "English audio · Czech subtitles"
+          },
+          "price": null,
+          "currency": null,
+          "booking_url": "https://www.cinemacity.cz/cinemas/flora/1052?lang=en_GB",
+          "availability_reported": null
+        },
+        {
+          "id": "cinema-city-flora-crawlers-21-20-english-audio-czech-subtitles",
+          "title": "Crawlers",
+          "starts_at": "2026-10-24T21:20:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "english_audio",
+          "language_evidence": {
+            "manual_note": "English audio · Czech subtitles"
+          },
+          "price": null,
+          "currency": null,
+          "booking_url": "https://www.cinemacity.cz/cinemas/flora/1052?lang=en_GB",
+          "availability_reported": null
+        },
+        {
+          "id": "cinema-city-flora-digger-18-10-english-audio-czech-subtitles",
+          "title": "Digger",
+          "starts_at": "2026-10-24T18:10:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "english_audio",
+          "language_evidence": {
+            "manual_note": "English audio · Czech subtitles"
+          },
+          "price": null,
+          "currency": null,
+          "booking_url": "https://www.cinemacity.cz/cinemas/flora/1052?lang=en_GB",
+          "availability_reported": null
+        },
+        {
+          "id": "cinema-city-flora-digger-20-50-english-audio-czech-subtitles",
+          "title": "Digger",
+          "starts_at": "2026-10-24T20:50:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "english_audio",
+          "language_evidence": {
+            "manual_note": "English audio · Czech subtitles"
+          },
+          "price": null,
+          "currency": null,
+          "booking_url": "https://www.cinemacity.cz/cinemas/flora/1052?lang=en_GB",
+          "availability_reported": null
+        },
+        {
+          "id": "cinema-city-flora-heart-of-the-beast-21-10-english-audio-czech-subtitles",
+          "title": "Heart of the Beast",
+          "starts_at": "2026-10-24T21:10:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "english_audio",
+          "language_evidence": {
+            "manual_note": "English audio · Czech subtitles"
+          },
+          "price": null,
+          "currency": null,
+          "booking_url": "https://www.cinemacity.cz/cinemas/flora/1052?lang=en_GB",
+          "availability_reported": null
+        },
+        {
+          "id": "cinema-city-flora-resident-evil-19-30-english-audio-czech-subtitles",
+          "title": "Resident Evil",
+          "starts_at": "2026-10-24T19:30:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "english_audio",
+          "language_evidence": {
+            "manual_note": "English audio · Czech subtitles"
+          },
+          "price": null,
+          "currency": null,
+          "booking_url": "https://www.cinemacity.cz/cinemas/flora/1052?lang=en_GB",
+          "availability_reported": null
+        },
+        {
+          "id": "cinema-city-flora-resident-evil-21-30-english-audio-czech-subtitles",
+          "title": "Resident Evil",
+          "starts_at": "2026-10-24T21:30:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "english_audio",
+          "language_evidence": {
+            "manual_note": "English audio · Czech subtitles"
+          },
+          "price": null,
+          "currency": null,
+          "booking_url": "https://www.cinemacity.cz/cinemas/flora/1052?lang=en_GB",
+          "availability_reported": null
+        },
+        {
+          "id": "cinema-city-flora-sense-and-sensibility-18-00-english-audio-czech-subtitles",
+          "title": "Sense and Sensibility",
+          "starts_at": "2026-10-24T18:00:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "english_audio",
+          "language_evidence": {
+            "manual_note": "English audio · Czech subtitles"
+          },
+          "price": null,
+          "currency": null,
+          "booking_url": "https://www.cinemacity.cz/cinemas/flora/1052?lang=en_GB",
+          "availability_reported": null
+        },
+        {
+          "id": "cinema-city-flora-the-odyssey-20-30-english-audio-czech-subtitles-imax-70mm",
+          "title": "The Odyssey",
+          "starts_at": "2026-10-24T20:30:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "english_audio",
+          "language_evidence": {
+            "manual_note": "English audio · Czech subtitles · IMAX 70mm"
+          },
+          "price": null,
+          "currency": null,
+          "booking_url": "https://www.cinemacity.cz/cinemas/flora/1052?lang=en_GB",
+          "availability_reported": null
+        },
+        {
+          "id": "cinema-city-flora-verity-20-20-english-audio-czech-subtitles",
+          "title": "Verity",
+          "starts_at": "2026-10-24T20:20:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "english_audio",
+          "language_evidence": {
+            "manual_note": "English audio · Czech subtitles"
+          },
+          "price": null,
+          "currency": null,
+          "booking_url": "https://www.cinemacity.cz/cinemas/flora/1052?lang=en_GB",
+          "availability_reported": null
+        },
+        {
+          "id": "cinema-city-flora-whalefall-20-40-english-audio-czech-subtitles",
+          "title": "Whalefall",
+          "starts_at": "2026-10-24T20:40:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "english_audio",
+          "language_evidence": {
+            "manual_note": "English audio · Czech subtitles"
+          },
+          "price": null,
+          "currency": null,
+          "booking_url": "https://www.cinemacity.cz/cinemas/flora/1052?lang=en_GB",
+          "availability_reported": null
+        }
+      ]
+    },
+    {
+      "venue_id": "kino-atlas",
+      "source_url": "https://www.kinoatlaspraha.cz/",
+      "screenings": [
+        {
+          "id": "kino-atlas-sense-and-sensibility-18-45-english-friendly-venue-label-english-film",
+          "title": "Sense and Sensibility",
+          "starts_at": "2026-10-24T18:45:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "english_friendly",
+          "language_evidence": {
+            "manual_note": "English-friendly venue label · English film"
+          },
+          "price": "159 Kč",
+          "currency": "CZK",
+          "booking_url": "https://www.kinoatlaspraha.cz/",
+          "availability_reported": null
+        },
+        {
+          "id": "kino-atlas-clayface-21-15-english-friendly-venue-label-english-film",
+          "title": "Clayface",
+          "starts_at": "2026-10-24T21:15:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "english_friendly",
+          "language_evidence": {
+            "manual_note": "English-friendly venue label · English film"
+          },
+          "price": "149 Kč",
+          "currency": "CZK",
+          "booking_url": "https://www.kinoatlaspraha.cz/",
+          "availability_reported": null
+        }
+      ]
+    },
+    {
+      "venue_id": "kino-pilotu",
+      "source_url": "https://kinopilotu.cz/",
+      "screenings": [
+        {
+          "id": "kino-pilotu-sense-and-sensibility-19-10-english-audio-czech-subtitles",
+          "title": "Sense and Sensibility",
+          "starts_at": "2026-10-24T19:10:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "english_audio",
+          "language_evidence": {
+            "manual_note": "English audio · Czech subtitles"
+          },
+          "price": "170 Kč",
+          "currency": "CZK",
+          "booking_url": "https://kinopilotu.cz/",
+          "availability_reported": null
+        },
+        {
+          "id": "kino-pilotu-wirbel-19-25-english-subtitles",
+          "title": "Wirbel",
+          "starts_at": "2026-10-24T19:25:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "english_subtitles",
+          "language_evidence": {
+            "manual_note": "English subtitles"
+          },
+          "price": "170 Kč",
+          "currency": "CZK",
+          "booking_url": "https://kinopilotu.cz/",
+          "availability_reported": null
+        },
+        {
+          "id": "kino-pilotu-die-my-love-21-00-english-audio-czech-subtitles-cecko-15-seats",
+          "title": "Die My Love",
+          "starts_at": "2026-10-24T21:00:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "english_audio",
+          "language_evidence": {
+            "manual_note": "English audio · Czech subtitles · Céčko (15 seats)"
+          },
+          "price": "130 Kč",
+          "currency": "CZK",
+          "booking_url": "https://kinopilotu.cz/",
+          "availability_reported": null
+        },
+        {
+          "id": "kino-pilotu-digger-21-20-english-audio-czech-subtitles",
+          "title": "Digger",
+          "starts_at": "2026-10-24T21:20:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "english_audio",
+          "language_evidence": {
+            "manual_note": "English audio · Czech subtitles"
+          },
+          "price": "170 Kč",
+          "currency": "CZK",
+          "booking_url": "https://kinopilotu.cz/",
+          "availability_reported": null
+        },
+        {
+          "id": "kino-pilotu-the-invite-21-40-english-original-czech-subtitles",
+          "title": "The Invite",
+          "starts_at": "2026-10-24T21:40:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "english_audio",
+          "language_evidence": {
+            "manual_note": "English original · Czech subtitles"
+          },
+          "price": "170 Kč",
+          "currency": "CZK",
+          "booking_url": "https://kinopilotu.cz/",
+          "availability_reported": null
+        }
+      ]
+    },
+    {
+      "venue_id": "edison-filmhub",
+      "source_url": "https://edisonfilmhub.cz/en/programme",
+      "screenings": [
+        {
+          "id": "edison-filmhub-kolnoa-short-films-block-19-20-hebrew-audio-english-czech-subtitles",
+          "title": "Kolnoa – Short Films Block",
+          "starts_at": "2026-10-24T19:20:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "english_audio",
+          "language_evidence": {
+            "manual_note": "Hebrew audio · English + Czech subtitles"
+          },
+          "price": "150 Kč",
+          "currency": "CZK",
+          "booking_url": "https://edisonfilmhub.cz/en/programme",
+          "availability_reported": null
+        },
+        {
+          "id": "edison-filmhub-the-ring-kolnoa-festival-20-45-hebrew-hungarian-english-english-czech-subtitles",
+          "title": "The Ring (Kolnoa festival)",
+          "starts_at": "2026-10-24T20:45:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "english_audio",
+          "language_evidence": {
+            "manual_note": "Hebrew / Hungarian / English · English + Czech subtitles"
+          },
+          "price": "190 Kč",
+          "currency": "CZK",
+          "booking_url": "https://edisonfilmhub.cz/en/programme",
+          "availability_reported": null
+        }
+      ]
+    },
+    {
+      "venue_id": "bio-oko",
+      "source_url": "https://www.biooko.net/en",
+      "screenings": [
+        {
+          "id": "bio-oko-fjord-20-00-english-subtitles-multilingual-original",
+          "title": "Fjord",
+          "starts_at": "2026-10-24T20:00:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "english_subtitles",
+          "language_evidence": {
+            "manual_note": "English subtitles · multilingual original"
+          },
+          "price": "180 Kč",
+          "currency": "CZK",
+          "booking_url": "https://www.biooko.net/en",
+          "availability_reported": null
+        }
+      ]
+    },
+    {
+      "venue_id": "cinema-city-slovansky-dum",
+      "source_url": "https://www.cinemacity.cz/cinemas/slovanskydum/1033?lang=en_GB",
+      "screenings": [
+        {
+          "id": "cinema-city-slovansky-dum-clayface-18-40-english-audio-czech-subtitles-superscreen-atmos",
+          "title": "Clayface",
+          "starts_at": "2026-10-24T18:40:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "english_audio",
+          "language_evidence": {
+            "manual_note": "English audio · Czech subtitles · Superscreen / Atmos"
+          },
+          "price": null,
+          "currency": null,
+          "booking_url": "https://www.cinemacity.cz/cinemas/slovanskydum/1033?lang=en_GB",
+          "availability_reported": null
+        },
+        {
+          "id": "cinema-city-slovansky-dum-clayface-21-00-english-audio-czech-subtitles-superscreen-atmos",
+          "title": "Clayface",
+          "starts_at": "2026-10-24T21:00:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "english_audio",
+          "language_evidence": {
+            "manual_note": "English audio · Czech subtitles · Superscreen / Atmos"
+          },
+          "price": null,
+          "currency": null,
+          "booking_url": "https://www.cinemacity.cz/cinemas/slovanskydum/1033?lang=en_GB",
+          "availability_reported": null
+        },
+        {
+          "id": "cinema-city-slovansky-dum-crawlers-21-20-english-audio-czech-subtitles",
+          "title": "Crawlers",
+          "starts_at": "2026-10-24T21:20:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "english_audio",
+          "language_evidence": {
+            "manual_note": "English audio · Czech subtitles"
+          },
+          "price": null,
+          "currency": null,
+          "booking_url": "https://www.cinemacity.cz/cinemas/slovanskydum/1033?lang=en_GB",
+          "availability_reported": null
+        },
+        {
+          "id": "cinema-city-slovansky-dum-digger-20-50-english-audio-czech-subtitles",
+          "title": "Digger",
+          "starts_at": "2026-10-24T20:50:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "english_audio",
+          "language_evidence": {
+            "manual_note": "English audio · Czech subtitles"
+          },
+          "price": null,
+          "currency": null,
+          "booking_url": "https://www.cinemacity.cz/cinemas/slovanskydum/1033?lang=en_GB",
+          "availability_reported": null
+        },
+        {
+          "id": "cinema-city-slovansky-dum-good-boy-20-10-check-cinema-lists-english-audio-film-metadata-conflicts",
+          "title": "Good Boy",
+          "starts_at": "2026-10-24T20:10:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "conflict",
+          "language_evidence": {
+            "manual_note": "CHECK: cinema lists English audio; film metadata conflicts"
+          },
+          "price": null,
+          "currency": null,
+          "booking_url": "https://www.cinemacity.cz/cinemas/slovanskydum/1033?lang=en_GB",
+          "availability_reported": null
+        },
+        {
+          "id": "cinema-city-slovansky-dum-heart-of-the-beast-18-00-english-audio-czech-subtitles",
+          "title": "Heart of the Beast",
+          "starts_at": "2026-10-24T18:00:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "english_audio",
+          "language_evidence": {
+            "manual_note": "English audio · Czech subtitles"
+          },
+          "price": null,
+          "currency": null,
+          "booking_url": "https://www.cinemacity.cz/cinemas/slovanskydum/1033?lang=en_GB",
+          "availability_reported": null
+        },
+        {
+          "id": "cinema-city-slovansky-dum-resident-evil-20-20-english-audio-czech-subtitles",
+          "title": "Resident Evil",
+          "starts_at": "2026-10-24T20:20:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "english_audio",
+          "language_evidence": {
+            "manual_note": "English audio · Czech subtitles"
+          },
+          "price": null,
+          "currency": null,
+          "booking_url": "https://www.cinemacity.cz/cinemas/slovanskydum/1033?lang=en_GB",
+          "availability_reported": null
+        },
+        {
+          "id": "cinema-city-slovansky-dum-resident-evil-21-10-english-audio-czech-subtitles",
+          "title": "Resident Evil",
+          "starts_at": "2026-10-24T21:10:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "english_audio",
+          "language_evidence": {
+            "manual_note": "English audio · Czech subtitles"
+          },
+          "price": null,
+          "currency": null,
+          "booking_url": "https://www.cinemacity.cz/cinemas/slovanskydum/1033?lang=en_GB",
+          "availability_reported": null
+        },
+        {
+          "id": "cinema-city-slovansky-dum-sense-and-sensibility-18-00-english-audio-czech-subtitles",
+          "title": "Sense and Sensibility",
+          "starts_at": "2026-10-24T18:00:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "english_audio",
+          "language_evidence": {
+            "manual_note": "English audio · Czech subtitles"
+          },
+          "price": null,
+          "currency": null,
+          "booking_url": "https://www.cinemacity.cz/cinemas/slovanskydum/1033?lang=en_GB",
+          "availability_reported": null
+        },
+        {
+          "id": "cinema-city-slovansky-dum-the-odyssey-20-10-english-audio-czech-subtitles",
+          "title": "The Odyssey",
+          "starts_at": "2026-10-24T20:10:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "english_audio",
+          "language_evidence": {
+            "manual_note": "English audio · Czech subtitles"
+          },
+          "price": null,
+          "currency": null,
+          "booking_url": "https://www.cinemacity.cz/cinemas/slovanskydum/1033?lang=en_GB",
+          "availability_reported": null
+        },
+        {
+          "id": "cinema-city-slovansky-dum-verity-20-40-english-audio-czech-subtitles",
+          "title": "Verity",
+          "starts_at": "2026-10-24T20:40:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "english_audio",
+          "language_evidence": {
+            "manual_note": "English audio · Czech subtitles"
+          },
+          "price": null,
+          "currency": null,
+          "booking_url": "https://www.cinemacity.cz/cinemas/slovanskydum/1033?lang=en_GB",
+          "availability_reported": null
+        }
+      ]
+    },
+    {
+      "venue_id": "kino-svetozor",
+      "source_url": "https://www.kinosvetozor.cz/en",
+      "screenings": [
+        {
+          "id": "kino-svetozor-naza-18-45-english-friendly-venue-label",
+          "title": "NAZA",
+          "starts_at": "2026-10-24T18:45:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "english_friendly",
+          "language_evidence": {
+            "manual_note": "English-friendly venue label"
+          },
+          "price": "185 Kč",
+          "currency": "CZK",
+          "booking_url": "https://www.kinosvetozor.cz/en",
+          "availability_reported": null
+        },
+        {
+          "id": "kino-svetozor-digger-20-15-english-audio-czech-subtitles",
+          "title": "Digger",
+          "starts_at": "2026-10-24T20:15:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "english_audio",
+          "language_evidence": {
+            "manual_note": "English audio · Czech subtitles"
+          },
+          "price": "185 Kč",
+          "currency": "CZK",
+          "booking_url": "https://www.kinosvetozor.cz/en",
+          "availability_reported": null
+        },
+        {
+          "id": "kino-svetozor-if-pigeons-turned-to-gold-20-30-english-subtitles",
+          "title": "If Pigeons Turned to Gold",
+          "starts_at": "2026-10-24T20:30:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "english_subtitles",
+          "language_evidence": {
+            "manual_note": "English subtitles"
+          },
+          "price": "185 Kč",
+          "currency": "CZK",
+          "booking_url": "https://www.kinosvetozor.cz/en",
+          "availability_reported": null
+        },
+        {
+          "id": "kino-svetozor-good-boy-20-45-english-friendly-venue-label",
+          "title": "Good Boy",
+          "starts_at": "2026-10-24T20:45:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "english_friendly",
+          "language_evidence": {
+            "manual_note": "English-friendly venue label"
+          },
+          "price": "185 Kč",
+          "currency": "CZK",
+          "booking_url": "https://www.kinosvetozor.cz/en",
+          "availability_reported": null
+        }
+      ]
+    },
+    {
+      "venue_id": "kino-lucerna",
+      "source_url": "https://www.kinolucerna.cz/en",
+      "screenings": [
+        {
+          "id": "kino-lucerna-if-pigeons-turned-to-gold-18-00-english-friendly-venue-label-english-subtitles",
+          "title": "If Pigeons Turned to Gold",
+          "starts_at": "2026-10-24T18:00:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "english_friendly",
+          "language_evidence": {
+            "manual_note": "English-friendly venue label · English subtitles"
+          },
+          "price": "185 Kč",
+          "currency": "CZK",
+          "booking_url": "https://www.kinolucerna.cz/en",
+          "availability_reported": null
+        },
+        {
+          "id": "kino-lucerna-the-retirement-20-15-english-friendly-venue-label-cine-argentino",
+          "title": "The Retirement",
+          "starts_at": "2026-10-24T20:15:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "english_friendly",
+          "language_evidence": {
+            "manual_note": "English-friendly venue label · Cine Argentino"
+          },
+          "price": "170 Kč",
+          "currency": "CZK",
+          "booking_url": "https://www.kinolucerna.cz/en",
+          "availability_reported": null
+        }
+      ]
+    },
+    {
+      "venue_id": "kino-mat",
+      "source_url": "https://www.mat.cz/kino/cz/kino-mat?movie-id=8460_terminator-2-den-zuctovani-kinoverze",
+      "screenings": [
+        {
+          "id": "kino-mat-terminator-2-judgment-day-19-45-english-audio-czech-external-subtitles-35mm-dolby-a",
+          "title": "Terminator 2: Judgment Day",
+          "starts_at": "2026-10-24T19:45:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "english_audio",
+          "language_evidence": {
+            "manual_note": "English audio · Czech external subtitles · 35mm Dolby A"
+          },
+          "price": "189 Kč",
+          "currency": "CZK",
+          "booking_url": "https://www.mat.cz/kino/cz/kino-mat?movie-id=8460_terminator-2-den-zuctovani-kinoverze",
+          "availability_reported": null
+        }
+      ]
+    },
+    {
+      "venue_id": "premiere-cinemas-hostivar",
+      "source_url": "https://www.premierecinemas.cz/",
+      "screenings": [
+        {
+          "id": "premiere-cinemas-hostivar-clayface-18-40-english-original-czech-subtitles-4k-7-1",
+          "title": "Clayface",
+          "starts_at": "2026-10-24T18:40:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "english_audio",
+          "language_evidence": {
+            "manual_note": "English original · Czech subtitles · 4K 7.1"
+          },
+          "price": null,
+          "currency": null,
+          "booking_url": "https://www.premierecinemas.cz/",
+          "availability_reported": null
+        },
+        {
+          "id": "premiere-cinemas-hostivar-clayface-20-20-english-original-czech-subtitles-4k-atmos",
+          "title": "Clayface",
+          "starts_at": "2026-10-24T20:20:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "english_audio",
+          "language_evidence": {
+            "manual_note": "English original · Czech subtitles · 4K Atmos"
+          },
+          "price": null,
+          "currency": null,
+          "booking_url": "https://www.premierecinemas.cz/",
+          "availability_reported": null
+        },
+        {
+          "id": "premiere-cinemas-hostivar-sense-and-sensibility-18-00-english-original-czech-subtitles-4k",
+          "title": "Sense and Sensibility",
+          "starts_at": "2026-10-24T18:00:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "english_audio",
+          "language_evidence": {
+            "manual_note": "English original · Czech subtitles · 4K"
+          },
+          "price": null,
+          "currency": null,
+          "booking_url": "https://www.premierecinemas.cz/",
+          "availability_reported": null
+        },
+        {
+          "id": "premiere-cinemas-hostivar-sense-and-sensibility-20-40-english-original-czech-subtitles-4k",
+          "title": "Sense and Sensibility",
+          "starts_at": "2026-10-24T20:40:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "english_audio",
+          "language_evidence": {
+            "manual_note": "English original · Czech subtitles · 4K"
+          },
+          "price": null,
+          "currency": null,
+          "booking_url": "https://www.premierecinemas.cz/",
+          "availability_reported": null
+        },
+        {
+          "id": "premiere-cinemas-hostivar-resident-evil-19-20-english-original-czech-subtitles-4k",
+          "title": "Resident Evil",
+          "starts_at": "2026-10-24T19:20:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "english_audio",
+          "language_evidence": {
+            "manual_note": "English original · Czech subtitles · 4K"
+          },
+          "price": null,
+          "currency": null,
+          "booking_url": "https://www.premierecinemas.cz/",
+          "availability_reported": null
+        },
+        {
+          "id": "premiere-cinemas-hostivar-heart-of-the-beast-18-10-english-original-czech-subtitles-4k-atmos",
+          "title": "Heart of the Beast",
+          "starts_at": "2026-10-24T18:10:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "english_audio",
+          "language_evidence": {
+            "manual_note": "English original · Czech subtitles · 4K Atmos"
+          },
+          "price": null,
+          "currency": null,
+          "booking_url": "https://www.premierecinemas.cz/",
+          "availability_reported": null
+        },
+        {
+          "id": "premiere-cinemas-hostivar-heart-of-the-beast-21-15-english-original-czech-subtitles-4k-7-1",
+          "title": "Heart of the Beast",
+          "starts_at": "2026-10-24T21:15:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "english_audio",
+          "language_evidence": {
+            "manual_note": "English original · Czech subtitles · 4K 7.1"
+          },
+          "price": null,
+          "currency": null,
+          "booking_url": "https://www.premierecinemas.cz/",
+          "availability_reported": null
+        }
+      ]
+    },
+    {
+      "venue_id": "cinema-city-novy-smichov",
+      "source_url": "https://www.cinemacity.cz/cinemas/novysmichov/1031?lang=en_GB",
+      "screenings": [
+        {
+          "id": "cinema-city-novy-smichov-clayface-18-10-english-audio-czech-subtitles-2d",
+          "title": "Clayface",
+          "starts_at": "2026-10-24T18:10:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "english_audio",
+          "language_evidence": {
+            "manual_note": "English audio · Czech subtitles · 2D"
+          },
+          "price": null,
+          "currency": null,
+          "booking_url": "https://www.cinemacity.cz/cinemas/novysmichov/1031?lang=en_GB",
+          "availability_reported": null
+        },
+        {
+          "id": "cinema-city-novy-smichov-clayface-21-30-english-audio-czech-subtitles-2d",
+          "title": "Clayface",
+          "starts_at": "2026-10-24T21:30:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "english_audio",
+          "language_evidence": {
+            "manual_note": "English audio · Czech subtitles · 2D"
+          },
+          "price": null,
+          "currency": null,
+          "booking_url": "https://www.cinemacity.cz/cinemas/novysmichov/1031?lang=en_GB",
+          "availability_reported": null
+        },
+        {
+          "id": "cinema-city-novy-smichov-clayface-19-00-english-audio-czech-subtitles-4dx",
+          "title": "Clayface",
+          "starts_at": "2026-10-24T19:00:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "english_audio",
+          "language_evidence": {
+            "manual_note": "English audio · Czech subtitles · 4DX"
+          },
+          "price": null,
+          "currency": null,
+          "booking_url": "https://www.cinemacity.cz/cinemas/novysmichov/1031?lang=en_GB",
+          "availability_reported": null
+        },
+        {
+          "id": "cinema-city-novy-smichov-crawlers-21-30-english-audio-czech-subtitles",
+          "title": "Crawlers",
+          "starts_at": "2026-10-24T21:30:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "english_audio",
+          "language_evidence": {
+            "manual_note": "English audio · Czech subtitles"
+          },
+          "price": null,
+          "currency": null,
+          "booking_url": "https://www.cinemacity.cz/cinemas/novysmichov/1031?lang=en_GB",
+          "availability_reported": null
+        },
+        {
+          "id": "cinema-city-novy-smichov-heart-of-the-beast-18-40-english-audio-czech-subtitles",
+          "title": "Heart of the Beast",
+          "starts_at": "2026-10-24T18:40:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "english_audio",
+          "language_evidence": {
+            "manual_note": "English audio · Czech subtitles"
+          },
+          "price": null,
+          "currency": null,
+          "booking_url": "https://www.cinemacity.cz/cinemas/novysmichov/1031?lang=en_GB",
+          "availability_reported": null
+        },
+        {
+          "id": "cinema-city-novy-smichov-heart-of-the-beast-20-50-english-audio-czech-subtitles",
+          "title": "Heart of the Beast",
+          "starts_at": "2026-10-24T20:50:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "english_audio",
+          "language_evidence": {
+            "manual_note": "English audio · Czech subtitles"
+          },
+          "price": null,
+          "currency": null,
+          "booking_url": "https://www.cinemacity.cz/cinemas/novysmichov/1031?lang=en_GB",
+          "availability_reported": null
+        },
+        {
+          "id": "cinema-city-novy-smichov-resident-evil-18-00-english-audio-czech-subtitles-2d",
+          "title": "Resident Evil",
+          "starts_at": "2026-10-24T18:00:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "english_audio",
+          "language_evidence": {
+            "manual_note": "English audio · Czech subtitles · 2D"
+          },
+          "price": null,
+          "currency": null,
+          "booking_url": "https://www.cinemacity.cz/cinemas/novysmichov/1031?lang=en_GB",
+          "availability_reported": null
+        },
+        {
+          "id": "cinema-city-novy-smichov-resident-evil-21-20-english-audio-czech-subtitles-4dx",
+          "title": "Resident Evil",
+          "starts_at": "2026-10-24T21:20:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "english_audio",
+          "language_evidence": {
+            "manual_note": "English audio · Czech subtitles · 4DX"
+          },
+          "price": null,
+          "currency": null,
+          "booking_url": "https://www.cinemacity.cz/cinemas/novysmichov/1031?lang=en_GB",
+          "availability_reported": null
+        },
+        {
+          "id": "cinema-city-novy-smichov-sense-and-sensibility-19-50-english-audio-czech-subtitles",
+          "title": "Sense and Sensibility",
+          "starts_at": "2026-10-24T19:50:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "english_audio",
+          "language_evidence": {
+            "manual_note": "English audio · Czech subtitles"
+          },
+          "price": null,
+          "currency": null,
+          "booking_url": "https://www.cinemacity.cz/cinemas/novysmichov/1031?lang=en_GB",
+          "availability_reported": null
+        },
+        {
+          "id": "cinema-city-novy-smichov-street-fighter-18-50-english-audio-czech-subtitles",
+          "title": "Street Fighter",
+          "starts_at": "2026-10-24T18:50:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "english_audio",
+          "language_evidence": {
+            "manual_note": "English audio · Czech subtitles"
+          },
+          "price": null,
+          "currency": null,
+          "booking_url": "https://www.cinemacity.cz/cinemas/novysmichov/1031?lang=en_GB",
+          "availability_reported": null
+        },
+        {
+          "id": "cinema-city-novy-smichov-the-odyssey-19-20-english-audio-czech-subtitles",
+          "title": "The Odyssey",
+          "starts_at": "2026-10-24T19:20:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "english_audio",
+          "language_evidence": {
+            "manual_note": "English audio · Czech subtitles"
+          },
+          "price": null,
+          "currency": null,
+          "booking_url": "https://www.cinemacity.cz/cinemas/novysmichov/1031?lang=en_GB",
+          "availability_reported": null
+        },
+        {
+          "id": "cinema-city-novy-smichov-the-odyssey-20-30-english-audio-czech-subtitles",
+          "title": "The Odyssey",
+          "starts_at": "2026-10-24T20:30:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "english_audio",
+          "language_evidence": {
+            "manual_note": "English audio · Czech subtitles"
+          },
+          "price": null,
+          "currency": null,
+          "booking_url": "https://www.cinemacity.cz/cinemas/novysmichov/1031?lang=en_GB",
+          "availability_reported": null
+        },
+        {
+          "id": "cinema-city-novy-smichov-verity-19-10-english-audio-czech-subtitles",
+          "title": "Verity",
+          "starts_at": "2026-10-24T19:10:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "english_audio",
+          "language_evidence": {
+            "manual_note": "English audio · Czech subtitles"
+          },
+          "price": null,
+          "currency": null,
+          "booking_url": "https://www.cinemacity.cz/cinemas/novysmichov/1031?lang=en_GB",
+          "availability_reported": null
+        },
+        {
+          "id": "cinema-city-novy-smichov-verity-20-00-english-audio-czech-subtitles",
+          "title": "Verity",
+          "starts_at": "2026-10-24T20:00:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "english_audio",
+          "language_evidence": {
+            "manual_note": "English audio · Czech subtitles"
+          },
+          "price": null,
+          "currency": null,
+          "booking_url": "https://www.cinemacity.cz/cinemas/novysmichov/1031?lang=en_GB",
+          "availability_reported": null
+        }
+      ]
+    },
+    {
+      "venue_id": "cinestar-andel",
+      "source_url": "https://cinestar.cz/cz/praha5/program",
+      "screenings": [
+        {
+          "id": "cinestar-andel-clayface-19-20-english-original-czech-subtitles",
+          "title": "Clayface",
+          "starts_at": "2026-10-24T19:20:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "english_audio",
+          "language_evidence": {
+            "manual_note": "English original · Czech subtitles"
+          },
+          "price": null,
+          "currency": null,
+          "booking_url": "https://cinestar.cz/cz/praha5/program",
+          "availability_reported": null
+        },
+        {
+          "id": "cinestar-andel-clayface-21-30-english-original-czech-subtitles",
+          "title": "Clayface",
+          "starts_at": "2026-10-24T21:30:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "english_audio",
+          "language_evidence": {
+            "manual_note": "English original · Czech subtitles"
+          },
+          "price": null,
+          "currency": null,
+          "booking_url": "https://cinestar.cz/cz/praha5/program",
+          "availability_reported": null
+        },
+        {
+          "id": "cinestar-andel-sense-and-sensibility-20-15-english-original-czech-subtitles",
+          "title": "Sense and Sensibility",
+          "starts_at": "2026-10-24T20:15:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "english_audio",
+          "language_evidence": {
+            "manual_note": "English original · Czech subtitles"
+          },
+          "price": null,
+          "currency": null,
+          "booking_url": "https://cinestar.cz/cz/praha5/program",
+          "availability_reported": null
+        },
+        {
+          "id": "cinestar-andel-digger-19-00-english-original-czech-subtitles-4k-7-1",
+          "title": "Digger",
+          "starts_at": "2026-10-24T19:00:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "english_audio",
+          "language_evidence": {
+            "manual_note": "English original · Czech subtitles · 4K 7.1"
+          },
+          "price": null,
+          "currency": null,
+          "booking_url": "https://cinestar.cz/cz/praha5/program",
+          "availability_reported": null
+        },
+        {
+          "id": "cinestar-andel-the-odyssey-20-20-english-original-czech-subtitles-premium-4k",
+          "title": "The Odyssey",
+          "starts_at": "2026-10-24T20:20:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "english_audio",
+          "language_evidence": {
+            "manual_note": "English original · Czech subtitles · Premium 4K"
+          },
+          "price": null,
+          "currency": null,
+          "booking_url": "https://cinestar.cz/cz/praha5/program",
+          "availability_reported": null
+        },
+        {
+          "id": "cinestar-andel-verity-20-00-english-original-czech-subtitles-4k",
+          "title": "Verity",
+          "starts_at": "2026-10-24T20:00:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "english_audio",
+          "language_evidence": {
+            "manual_note": "English original · Czech subtitles · 4K"
+          },
+          "price": null,
+          "currency": null,
+          "booking_url": "https://cinestar.cz/cz/praha5/program",
+          "availability_reported": null
+        },
+        {
+          "id": "cinestar-andel-resident-evil-18-50-english-original-czech-subtitles-4k",
+          "title": "Resident Evil",
+          "starts_at": "2026-10-24T18:50:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "english_audio",
+          "language_evidence": {
+            "manual_note": "English original · Czech subtitles · 4K"
+          },
+          "price": null,
+          "currency": null,
+          "booking_url": "https://cinestar.cz/cz/praha5/program",
+          "availability_reported": null
+        },
+        {
+          "id": "cinestar-andel-resident-evil-21-10-english-original-czech-subtitles-premium-atmos-4k",
+          "title": "Resident Evil",
+          "starts_at": "2026-10-24T21:10:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "english_audio",
+          "language_evidence": {
+            "manual_note": "English original · Czech subtitles · Premium Atmos 4K"
+          },
+          "price": null,
+          "currency": null,
+          "booking_url": "https://cinestar.cz/cz/praha5/program",
+          "availability_reported": null
+        },
+        {
+          "id": "cinestar-andel-heart-of-the-beast-19-00-english-original-czech-subtitles-gold-class-atmos",
+          "title": "Heart of the Beast",
+          "starts_at": "2026-10-24T19:00:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "english_audio",
+          "language_evidence": {
+            "manual_note": "English original · Czech subtitles · Gold Class Atmos"
+          },
+          "price": null,
+          "currency": null,
+          "booking_url": "https://cinestar.cz/cz/praha5/program",
+          "availability_reported": null
+        },
+        {
+          "id": "cinestar-andel-heart-of-the-beast-19-15-english-original-czech-subtitles-7-1",
+          "title": "Heart of the Beast",
+          "starts_at": "2026-10-24T19:15:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "english_audio",
+          "language_evidence": {
+            "manual_note": "English original · Czech subtitles · 7.1"
+          },
+          "price": null,
+          "currency": null,
+          "booking_url": "https://cinestar.cz/cz/praha5/program",
+          "availability_reported": null
+        },
+        {
+          "id": "cinestar-andel-heart-of-the-beast-21-30-english-original-czech-subtitles-7-1",
+          "title": "Heart of the Beast",
+          "starts_at": "2026-10-24T21:30:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "english_audio",
+          "language_evidence": {
+            "manual_note": "English original · Czech subtitles · 7.1"
+          },
+          "price": null,
+          "currency": null,
+          "booking_url": "https://cinestar.cz/cz/praha5/program",
+          "availability_reported": null
+        },
+        {
+          "id": "cinestar-andel-whalefall-18-15-english-original-czech-subtitles",
+          "title": "Whalefall",
+          "starts_at": "2026-10-24T18:15:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "english_audio",
+          "language_evidence": {
+            "manual_note": "English original · Czech subtitles"
+          },
+          "price": null,
+          "currency": null,
+          "booking_url": "https://cinestar.cz/cz/praha5/program",
+          "availability_reported": null
+        },
+        {
+          "id": "cinestar-andel-whalefall-20-30-english-original-czech-subtitles",
+          "title": "Whalefall",
+          "starts_at": "2026-10-24T20:30:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "english_audio",
+          "language_evidence": {
+            "manual_note": "English original · Czech subtitles"
+          },
+          "price": null,
+          "currency": null,
+          "booking_url": "https://cinestar.cz/cz/praha5/program",
+          "availability_reported": null
+        }
+      ]
+    },
+    {
+      "venue_id": "cinema-city-letnany",
+      "source_url": "https://www.cinemacity.cz/cinemas/letnany/1030?lang=en_GB",
+      "screenings": [
+        {
+          "id": "cinema-city-letnany-clayface-18-40-english-audio-czech-subtitles",
+          "title": "Clayface",
+          "starts_at": "2026-10-24T18:40:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "english_audio",
+          "language_evidence": {
+            "manual_note": "English audio · Czech subtitles"
+          },
+          "price": null,
+          "currency": null,
+          "booking_url": "https://www.cinemacity.cz/cinemas/letnany/1030?lang=en_GB",
+          "availability_reported": null
+        },
+        {
+          "id": "cinema-city-letnany-clayface-21-00-english-audio-czech-subtitles",
+          "title": "Clayface",
+          "starts_at": "2026-10-24T21:00:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "english_audio",
+          "language_evidence": {
+            "manual_note": "English audio · Czech subtitles"
+          },
+          "price": null,
+          "currency": null,
+          "booking_url": "https://www.cinemacity.cz/cinemas/letnany/1030?lang=en_GB",
+          "availability_reported": null
+        },
+        {
+          "id": "cinema-city-letnany-crawlers-21-20-english-audio-czech-subtitles",
+          "title": "Crawlers",
+          "starts_at": "2026-10-24T21:20:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "english_audio",
+          "language_evidence": {
+            "manual_note": "English audio · Czech subtitles"
+          },
+          "price": null,
+          "currency": null,
+          "booking_url": "https://www.cinemacity.cz/cinemas/letnany/1030?lang=en_GB",
+          "availability_reported": null
+        },
+        {
+          "id": "cinema-city-letnany-digger-20-10-english-audio-czech-subtitles",
+          "title": "Digger",
+          "starts_at": "2026-10-24T20:10:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "english_audio",
+          "language_evidence": {
+            "manual_note": "English audio · Czech subtitles"
+          },
+          "price": null,
+          "currency": null,
+          "booking_url": "https://www.cinemacity.cz/cinemas/letnany/1030?lang=en_GB",
+          "availability_reported": null
+        },
+        {
+          "id": "cinema-city-letnany-heart-of-the-beast-18-20-english-audio-czech-subtitles",
+          "title": "Heart of the Beast",
+          "starts_at": "2026-10-24T18:20:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "english_audio",
+          "language_evidence": {
+            "manual_note": "English audio · Czech subtitles"
+          },
+          "price": null,
+          "currency": null,
+          "booking_url": "https://www.cinemacity.cz/cinemas/letnany/1030?lang=en_GB",
+          "availability_reported": null
+        },
+        {
+          "id": "cinema-city-letnany-heart-of-the-beast-20-30-english-audio-czech-subtitles",
+          "title": "Heart of the Beast",
+          "starts_at": "2026-10-24T20:30:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "english_audio",
+          "language_evidence": {
+            "manual_note": "English audio · Czech subtitles"
+          },
+          "price": null,
+          "currency": null,
+          "booking_url": "https://www.cinemacity.cz/cinemas/letnany/1030?lang=en_GB",
+          "availability_reported": null
+        },
+        {
+          "id": "cinema-city-letnany-insidious-out-of-the-further-20-50-english-audio-czech-subtitles",
+          "title": "Insidious: Out of the Further",
+          "starts_at": "2026-10-24T20:50:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "english_audio",
+          "language_evidence": {
+            "manual_note": "English audio · Czech subtitles"
+          },
+          "price": null,
+          "currency": null,
+          "booking_url": "https://www.cinemacity.cz/cinemas/letnany/1030?lang=en_GB",
+          "availability_reported": null
+        },
+        {
+          "id": "cinema-city-letnany-resident-evil-18-30-english-audio-czech-subtitles",
+          "title": "Resident Evil",
+          "starts_at": "2026-10-24T18:30:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "english_audio",
+          "language_evidence": {
+            "manual_note": "English audio · Czech subtitles"
+          },
+          "price": null,
+          "currency": null,
+          "booking_url": "https://www.cinemacity.cz/cinemas/letnany/1030?lang=en_GB",
+          "availability_reported": null
+        },
+        {
+          "id": "cinema-city-letnany-resident-evil-18-40-english-audio-czech-subtitles",
+          "title": "Resident Evil",
+          "starts_at": "2026-10-24T18:40:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "english_audio",
+          "language_evidence": {
+            "manual_note": "English audio · Czech subtitles"
+          },
+          "price": null,
+          "currency": null,
+          "booking_url": "https://www.cinemacity.cz/cinemas/letnany/1030?lang=en_GB",
+          "availability_reported": null
+        },
+        {
+          "id": "cinema-city-letnany-resident-evil-20-40-english-audio-czech-subtitles",
+          "title": "Resident Evil",
+          "starts_at": "2026-10-24T20:40:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "english_audio",
+          "language_evidence": {
+            "manual_note": "English audio · Czech subtitles"
+          },
+          "price": null,
+          "currency": null,
+          "booking_url": "https://www.cinemacity.cz/cinemas/letnany/1030?lang=en_GB",
+          "availability_reported": null
+        },
+        {
+          "id": "cinema-city-letnany-sense-and-sensibility-19-40-english-audio-czech-subtitles",
+          "title": "Sense and Sensibility",
+          "starts_at": "2026-10-24T19:40:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "english_audio",
+          "language_evidence": {
+            "manual_note": "English audio · Czech subtitles"
+          },
+          "price": null,
+          "currency": null,
+          "booking_url": "https://www.cinemacity.cz/cinemas/letnany/1030?lang=en_GB",
+          "availability_reported": null
+        },
+        {
+          "id": "cinema-city-letnany-the-odyssey-19-20-english-audio-czech-subtitles",
+          "title": "The Odyssey",
+          "starts_at": "2026-10-24T19:20:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "english_audio",
+          "language_evidence": {
+            "manual_note": "English audio · Czech subtitles"
+          },
+          "price": null,
+          "currency": null,
+          "booking_url": "https://www.cinemacity.cz/cinemas/letnany/1030?lang=en_GB",
+          "availability_reported": null
+        },
+        {
+          "id": "cinema-city-letnany-whalefall-20-20-english-audio-czech-subtitles",
+          "title": "Whalefall",
+          "starts_at": "2026-10-24T20:20:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "english_audio",
+          "language_evidence": {
+            "manual_note": "English audio · Czech subtitles"
+          },
+          "price": null,
+          "currency": null,
+          "booking_url": "https://www.cinemacity.cz/cinemas/letnany/1030?lang=en_GB",
+          "availability_reported": null
+        }
+      ]
+    },
+    {
+      "venue_id": "cinema-city-chodov",
+      "source_url": "https://www.cinemacity.cz/cinemas/chodov/1056?lang=en_GB",
+      "screenings": [
+        {
+          "id": "cinema-city-chodov-clayface-18-20-english-audio-czech-subtitles-atmos",
+          "title": "Clayface",
+          "starts_at": "2026-10-24T18:20:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "english_audio",
+          "language_evidence": {
+            "manual_note": "English audio · Czech subtitles · Atmos"
+          },
+          "price": null,
+          "currency": null,
+          "booking_url": "https://www.cinemacity.cz/cinemas/chodov/1056?lang=en_GB",
+          "availability_reported": null
+        },
+        {
+          "id": "cinema-city-chodov-clayface-20-40-english-audio-czech-subtitles-atmos",
+          "title": "Clayface",
+          "starts_at": "2026-10-24T20:40:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "english_audio",
+          "language_evidence": {
+            "manual_note": "English audio · Czech subtitles · Atmos"
+          },
+          "price": null,
+          "currency": null,
+          "booking_url": "https://www.cinemacity.cz/cinemas/chodov/1056?lang=en_GB",
+          "availability_reported": null
+        },
+        {
+          "id": "cinema-city-chodov-clayface-18-50-english-audio-czech-subtitles-vip",
+          "title": "Clayface",
+          "starts_at": "2026-10-24T18:50:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "english_audio",
+          "language_evidence": {
+            "manual_note": "English audio · Czech subtitles · VIP"
+          },
+          "price": null,
+          "currency": null,
+          "booking_url": "https://www.cinemacity.cz/cinemas/chodov/1056?lang=en_GB",
+          "availability_reported": null
+        },
+        {
+          "id": "cinema-city-chodov-clayface-21-50-english-audio-czech-subtitles-vip",
+          "title": "Clayface",
+          "starts_at": "2026-10-24T21:50:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "english_audio",
+          "language_evidence": {
+            "manual_note": "English audio · Czech subtitles · VIP"
+          },
+          "price": null,
+          "currency": null,
+          "booking_url": "https://www.cinemacity.cz/cinemas/chodov/1056?lang=en_GB",
+          "availability_reported": null
+        },
+        {
+          "id": "cinema-city-chodov-clayface-19-10-english-audio-czech-subtitles-4dx",
+          "title": "Clayface",
+          "starts_at": "2026-10-24T19:10:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "english_audio",
+          "language_evidence": {
+            "manual_note": "English audio · Czech subtitles · 4DX"
+          },
+          "price": null,
+          "currency": null,
+          "booking_url": "https://www.cinemacity.cz/cinemas/chodov/1056?lang=en_GB",
+          "availability_reported": null
+        },
+        {
+          "id": "cinema-city-chodov-clayface-21-30-english-audio-czech-subtitles-4dx",
+          "title": "Clayface",
+          "starts_at": "2026-10-24T21:30:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "english_audio",
+          "language_evidence": {
+            "manual_note": "English audio · Czech subtitles · 4DX"
+          },
+          "price": null,
+          "currency": null,
+          "booking_url": "https://www.cinemacity.cz/cinemas/chodov/1056?lang=en_GB",
+          "availability_reported": null
+        },
+        {
+          "id": "cinema-city-chodov-crawlers-19-30-english-audio-czech-subtitles",
+          "title": "Crawlers",
+          "starts_at": "2026-10-24T19:30:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "english_audio",
+          "language_evidence": {
+            "manual_note": "English audio · Czech subtitles"
+          },
+          "price": null,
+          "currency": null,
+          "booking_url": "https://www.cinemacity.cz/cinemas/chodov/1056?lang=en_GB",
+          "availability_reported": null
+        },
+        {
+          "id": "cinema-city-chodov-crawlers-21-30-english-audio-czech-subtitles",
+          "title": "Crawlers",
+          "starts_at": "2026-10-24T21:30:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "english_audio",
+          "language_evidence": {
+            "manual_note": "English audio · Czech subtitles"
+          },
+          "price": null,
+          "currency": null,
+          "booking_url": "https://www.cinemacity.cz/cinemas/chodov/1056?lang=en_GB",
+          "availability_reported": null
+        },
+        {
+          "id": "cinema-city-chodov-good-boy-20-00-check-cinema-lists-english-audio-film-metadata-conflicts",
+          "title": "Good Boy",
+          "starts_at": "2026-10-24T20:00:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "conflict",
+          "language_evidence": {
+            "manual_note": "CHECK: cinema lists English audio; film metadata conflicts"
+          },
+          "price": null,
+          "currency": null,
+          "booking_url": "https://www.cinemacity.cz/cinemas/chodov/1056?lang=en_GB",
+          "availability_reported": null
+        },
+        {
+          "id": "cinema-city-chodov-heart-of-the-beast-18-00-english-audio-czech-subtitles",
+          "title": "Heart of the Beast",
+          "starts_at": "2026-10-24T18:00:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "english_audio",
+          "language_evidence": {
+            "manual_note": "English audio · Czech subtitles"
+          },
+          "price": null,
+          "currency": null,
+          "booking_url": "https://www.cinemacity.cz/cinemas/chodov/1056?lang=en_GB",
+          "availability_reported": null
+        },
+        {
+          "id": "cinema-city-chodov-heart-of-the-beast-19-20-english-audio-czech-subtitles",
+          "title": "Heart of the Beast",
+          "starts_at": "2026-10-24T19:20:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "english_audio",
+          "language_evidence": {
+            "manual_note": "English audio · Czech subtitles"
+          },
+          "price": null,
+          "currency": null,
+          "booking_url": "https://www.cinemacity.cz/cinemas/chodov/1056?lang=en_GB",
+          "availability_reported": null
+        },
+        {
+          "id": "cinema-city-chodov-heart-of-the-beast-21-10-english-audio-czech-subtitles-vip",
+          "title": "Heart of the Beast",
+          "starts_at": "2026-10-24T21:10:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "english_audio",
+          "language_evidence": {
+            "manual_note": "English audio · Czech subtitles · VIP"
+          },
+          "price": null,
+          "currency": null,
+          "booking_url": "https://www.cinemacity.cz/cinemas/chodov/1056?lang=en_GB",
+          "availability_reported": null
+        },
+        {
+          "id": "cinema-city-chodov-insidious-out-of-the-further-21-20-english-audio-czech-subtitles",
+          "title": "Insidious: Out of the Further",
+          "starts_at": "2026-10-24T21:20:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "english_audio",
+          "language_evidence": {
+            "manual_note": "English audio · Czech subtitles"
+          },
+          "price": null,
+          "currency": null,
+          "booking_url": "https://www.cinemacity.cz/cinemas/chodov/1056?lang=en_GB",
+          "availability_reported": null
+        },
+        {
+          "id": "cinema-city-chodov-practical-magic-2-21-10-english-audio-czech-subtitles",
+          "title": "Practical Magic 2",
+          "starts_at": "2026-10-24T21:10:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "english_audio",
+          "language_evidence": {
+            "manual_note": "English audio · Czech subtitles"
+          },
+          "price": null,
+          "currency": null,
+          "booking_url": "https://www.cinemacity.cz/cinemas/chodov/1056?lang=en_GB",
+          "availability_reported": null
+        },
+        {
+          "id": "cinema-city-chodov-resident-evil-19-00-english-audio-czech-subtitles-2d",
+          "title": "Resident Evil",
+          "starts_at": "2026-10-24T19:00:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "english_audio",
+          "language_evidence": {
+            "manual_note": "English audio · Czech subtitles · 2D"
+          },
+          "price": null,
+          "currency": null,
+          "booking_url": "https://www.cinemacity.cz/cinemas/chodov/1056?lang=en_GB",
+          "availability_reported": null
+        },
+        {
+          "id": "cinema-city-chodov-resident-evil-21-00-english-audio-czech-subtitles-2d",
+          "title": "Resident Evil",
+          "starts_at": "2026-10-24T21:00:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "english_audio",
+          "language_evidence": {
+            "manual_note": "English audio · Czech subtitles · 2D"
+          },
+          "price": null,
+          "currency": null,
+          "booking_url": "https://www.cinemacity.cz/cinemas/chodov/1056?lang=en_GB",
+          "availability_reported": null
+        },
+        {
+          "id": "cinema-city-chodov-resident-evil-20-10-english-audio-czech-subtitles-vip",
+          "title": "Resident Evil",
+          "starts_at": "2026-10-24T20:10:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "english_audio",
+          "language_evidence": {
+            "manual_note": "English audio · Czech subtitles · VIP"
+          },
+          "price": null,
+          "currency": null,
+          "booking_url": "https://www.cinemacity.cz/cinemas/chodov/1056?lang=en_GB",
+          "availability_reported": null
+        },
+        {
+          "id": "cinema-city-chodov-resident-evil-20-30-english-audio-czech-subtitles-atmos",
+          "title": "Resident Evil",
+          "starts_at": "2026-10-24T20:30:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "english_audio",
+          "language_evidence": {
+            "manual_note": "English audio · Czech subtitles · Atmos"
+          },
+          "price": null,
+          "currency": null,
+          "booking_url": "https://www.cinemacity.cz/cinemas/chodov/1056?lang=en_GB",
+          "availability_reported": null
+        },
+        {
+          "id": "cinema-city-chodov-sense-and-sensibility-20-30-english-audio-czech-subtitles",
+          "title": "Sense and Sensibility",
+          "starts_at": "2026-10-24T20:30:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "english_audio",
+          "language_evidence": {
+            "manual_note": "English audio · Czech subtitles"
+          },
+          "price": null,
+          "currency": null,
+          "booking_url": "https://www.cinemacity.cz/cinemas/chodov/1056?lang=en_GB",
+          "availability_reported": null
+        },
+        {
+          "id": "cinema-city-chodov-street-fighter-20-10-english-audio-czech-subtitles",
+          "title": "Street Fighter",
+          "starts_at": "2026-10-24T20:10:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "english_audio",
+          "language_evidence": {
+            "manual_note": "English audio · Czech subtitles"
+          },
+          "price": null,
+          "currency": null,
+          "booking_url": "https://www.cinemacity.cz/cinemas/chodov/1056?lang=en_GB",
+          "availability_reported": null
+        },
+        {
+          "id": "cinema-city-chodov-the-odyssey-19-30-english-audio-czech-subtitles",
+          "title": "The Odyssey",
+          "starts_at": "2026-10-24T19:30:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "english_audio",
+          "language_evidence": {
+            "manual_note": "English audio · Czech subtitles"
+          },
+          "price": null,
+          "currency": null,
+          "booking_url": "https://www.cinemacity.cz/cinemas/chodov/1056?lang=en_GB",
+          "availability_reported": null
+        },
+        {
+          "id": "cinema-city-chodov-verity-18-50-english-audio-czech-subtitles",
+          "title": "Verity",
+          "starts_at": "2026-10-24T18:50:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "english_audio",
+          "language_evidence": {
+            "manual_note": "English audio · Czech subtitles"
+          },
+          "price": null,
+          "currency": null,
+          "booking_url": "https://www.cinemacity.cz/cinemas/chodov/1056?lang=en_GB",
+          "availability_reported": null
+        },
+        {
+          "id": "cinema-city-chodov-verity-21-30-english-audio-czech-subtitles",
+          "title": "Verity",
+          "starts_at": "2026-10-24T21:30:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "english_audio",
+          "language_evidence": {
+            "manual_note": "English audio · Czech subtitles"
+          },
+          "price": null,
+          "currency": null,
+          "booking_url": "https://www.cinemacity.cz/cinemas/chodov/1056?lang=en_GB",
+          "availability_reported": null
+        }
+      ]
+    },
+    {
+      "venue_id": "kino-kavalirka",
+      "source_url": "https://www.kinokavalirka.cz/cs/uvod",
+      "screenings": [
+        {
+          "id": "kino-kavalirka-rebuilding-od-zakladu-18-00-english-friendly-original-czech-subtitles",
+          "title": "Rebuilding (Od základu)",
+          "starts_at": "2026-10-24T18:00:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "english_friendly",
+          "language_evidence": {
+            "manual_note": "English-friendly original · Czech subtitles"
+          },
+          "price": "180 Kč",
+          "currency": "CZK",
+          "booking_url": "https://www.kinokavalirka.cz/cs/uvod",
+          "availability_reported": null
+        },
+        {
+          "id": "kino-kavalirka-die-my-love-20-30-english-audio-czech-subtitles",
+          "title": "Die My Love",
+          "starts_at": "2026-10-24T20:30:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "english_audio",
+          "language_evidence": {
+            "manual_note": "English audio · Czech subtitles"
+          },
+          "price": "180 Kč",
+          "currency": "CZK",
+          "booking_url": "https://www.kinokavalirka.cz/cs/uvod",
+          "availability_reported": null
+        }
+      ]
+    },
+    {
+      "venue_id": "cinestar-cerny-most",
+      "source_url": "https://cinestar.cz/cz/praha9/program",
+      "screenings": [
+        {
+          "id": "cinestar-cerny-most-clayface-18-15-english-original-czech-subtitles-premium",
+          "title": "Clayface",
+          "starts_at": "2026-10-24T18:15:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "english_audio",
+          "language_evidence": {
+            "manual_note": "English original · Czech subtitles · Premium"
+          },
+          "price": null,
+          "currency": null,
+          "booking_url": "https://cinestar.cz/cz/praha9/program",
+          "availability_reported": null
+        },
+        {
+          "id": "cinestar-cerny-most-clayface-20-30-english-original-czech-subtitles-premium",
+          "title": "Clayface",
+          "starts_at": "2026-10-24T20:30:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "english_audio",
+          "language_evidence": {
+            "manual_note": "English original · Czech subtitles · Premium"
+          },
+          "price": null,
+          "currency": null,
+          "booking_url": "https://cinestar.cz/cz/praha9/program",
+          "availability_reported": null
+        },
+        {
+          "id": "cinestar-cerny-most-clayface-19-15-english-original-czech-subtitles-gold-class",
+          "title": "Clayface",
+          "starts_at": "2026-10-24T19:15:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "english_audio",
+          "language_evidence": {
+            "manual_note": "English original · Czech subtitles · Gold Class"
+          },
+          "price": null,
+          "currency": null,
+          "booking_url": "https://cinestar.cz/cz/praha9/program",
+          "availability_reported": null
+        },
+        {
+          "id": "cinestar-cerny-most-sense-and-sensibility-19-50-english-original-czech-subtitles",
+          "title": "Sense and Sensibility",
+          "starts_at": "2026-10-24T19:50:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "english_audio",
+          "language_evidence": {
+            "manual_note": "English original · Czech subtitles"
+          },
+          "price": null,
+          "currency": null,
+          "booking_url": "https://cinestar.cz/cz/praha9/program",
+          "availability_reported": null
+        },
+        {
+          "id": "cinestar-cerny-most-insidious-out-of-the-further-21-00-english-original-czech-subtitles",
+          "title": "Insidious: Out of the Further",
+          "starts_at": "2026-10-24T21:00:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "english_audio",
+          "language_evidence": {
+            "manual_note": "English original · Czech subtitles"
+          },
+          "price": null,
+          "currency": null,
+          "booking_url": "https://cinestar.cz/cz/praha9/program",
+          "availability_reported": null
+        },
+        {
+          "id": "cinestar-cerny-most-resident-evil-19-20-english-original-czech-subtitles",
+          "title": "Resident Evil",
+          "starts_at": "2026-10-24T19:20:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "english_audio",
+          "language_evidence": {
+            "manual_note": "English original · Czech subtitles"
+          },
+          "price": null,
+          "currency": null,
+          "booking_url": "https://cinestar.cz/cz/praha9/program",
+          "availability_reported": null
+        },
+        {
+          "id": "cinestar-cerny-most-resident-evil-21-20-english-original-czech-subtitles",
+          "title": "Resident Evil",
+          "starts_at": "2026-10-24T21:20:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "english_audio",
+          "language_evidence": {
+            "manual_note": "English original · Czech subtitles"
+          },
+          "price": null,
+          "currency": null,
+          "booking_url": "https://cinestar.cz/cz/praha9/program",
+          "availability_reported": null
+        },
+        {
+          "id": "cinestar-cerny-most-heart-of-the-beast-20-15-english-original-czech-subtitles-gold-class",
+          "title": "Heart of the Beast",
+          "starts_at": "2026-10-24T20:15:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "english_audio",
+          "language_evidence": {
+            "manual_note": "English original · Czech subtitles · Gold Class"
+          },
+          "price": null,
+          "currency": null,
+          "booking_url": "https://cinestar.cz/cz/praha9/program",
+          "availability_reported": null
+        },
+        {
+          "id": "cinestar-cerny-most-heart-of-the-beast-20-40-english-original-czech-subtitles-theatre-deluxe-atmos",
+          "title": "Heart of the Beast",
+          "starts_at": "2026-10-24T20:40:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "english_audio",
+          "language_evidence": {
+            "manual_note": "English original · Czech subtitles · Theatre Deluxe Atmos"
+          },
+          "price": null,
+          "currency": null,
+          "booking_url": "https://cinestar.cz/cz/praha9/program",
+          "availability_reported": null
+        }
+      ]
+    },
+    {
+      "venue_id": "cinema-city-zlicin",
+      "source_url": "https://www.cinemacity.cz/cinemas/zlicin/1051?lang=en_GB",
+      "screenings": [
+        {
+          "id": "cinema-city-zlicin-clayface-18-50-english-audio-czech-subtitles",
+          "title": "Clayface",
+          "starts_at": "2026-10-24T18:50:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "english_audio",
+          "language_evidence": {
+            "manual_note": "English audio · Czech subtitles"
+          },
+          "price": null,
+          "currency": null,
+          "booking_url": "https://www.cinemacity.cz/cinemas/zlicin/1051?lang=en_GB",
+          "availability_reported": null
+        },
+        {
+          "id": "cinema-city-zlicin-clayface-21-10-english-audio-czech-subtitles",
+          "title": "Clayface",
+          "starts_at": "2026-10-24T21:10:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "english_audio",
+          "language_evidence": {
+            "manual_note": "English audio · Czech subtitles"
+          },
+          "price": null,
+          "currency": null,
+          "booking_url": "https://www.cinemacity.cz/cinemas/zlicin/1051?lang=en_GB",
+          "availability_reported": null
+        },
+        {
+          "id": "cinema-city-zlicin-heart-of-the-beast-18-20-english-audio-czech-subtitles",
+          "title": "Heart of the Beast",
+          "starts_at": "2026-10-24T18:20:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "english_audio",
+          "language_evidence": {
+            "manual_note": "English audio · Czech subtitles"
+          },
+          "price": null,
+          "currency": null,
+          "booking_url": "https://www.cinemacity.cz/cinemas/zlicin/1051?lang=en_GB",
+          "availability_reported": null
+        },
+        {
+          "id": "cinema-city-zlicin-heart-of-the-beast-20-30-english-audio-czech-subtitles",
+          "title": "Heart of the Beast",
+          "starts_at": "2026-10-24T20:30:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "english_audio",
+          "language_evidence": {
+            "manual_note": "English audio · Czech subtitles"
+          },
+          "price": null,
+          "currency": null,
+          "booking_url": "https://www.cinemacity.cz/cinemas/zlicin/1051?lang=en_GB",
+          "availability_reported": null
+        },
+        {
+          "id": "cinema-city-zlicin-insidious-out-of-the-further-20-40-english-audio-czech-subtitles",
+          "title": "Insidious: Out of the Further",
+          "starts_at": "2026-10-24T20:40:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "english_audio",
+          "language_evidence": {
+            "manual_note": "English audio · Czech subtitles"
+          },
+          "price": null,
+          "currency": null,
+          "booking_url": "https://www.cinemacity.cz/cinemas/zlicin/1051?lang=en_GB",
+          "availability_reported": null
+        },
+        {
+          "id": "cinema-city-zlicin-resident-evil-18-30-english-audio-czech-subtitles",
+          "title": "Resident Evil",
+          "starts_at": "2026-10-24T18:30:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "english_audio",
+          "language_evidence": {
+            "manual_note": "English audio · Czech subtitles"
+          },
+          "price": null,
+          "currency": null,
+          "booking_url": "https://www.cinemacity.cz/cinemas/zlicin/1051?lang=en_GB",
+          "availability_reported": null
+        },
+        {
+          "id": "cinema-city-zlicin-resident-evil-19-10-english-audio-czech-subtitles",
+          "title": "Resident Evil",
+          "starts_at": "2026-10-24T19:10:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "english_audio",
+          "language_evidence": {
+            "manual_note": "English audio · Czech subtitles"
+          },
+          "price": null,
+          "currency": null,
+          "booking_url": "https://www.cinemacity.cz/cinemas/zlicin/1051?lang=en_GB",
+          "availability_reported": null
+        },
+        {
+          "id": "cinema-city-zlicin-resident-evil-21-10-english-audio-czech-subtitles",
+          "title": "Resident Evil",
+          "starts_at": "2026-10-24T21:10:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "english_audio",
+          "language_evidence": {
+            "manual_note": "English audio · Czech subtitles"
+          },
+          "price": null,
+          "currency": null,
+          "booking_url": "https://www.cinemacity.cz/cinemas/zlicin/1051?lang=en_GB",
+          "availability_reported": null
+        },
+        {
+          "id": "cinema-city-zlicin-sense-and-sensibility-19-40-english-audio-czech-subtitles",
+          "title": "Sense and Sensibility",
+          "starts_at": "2026-10-24T19:40:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "english_audio",
+          "language_evidence": {
+            "manual_note": "English audio · Czech subtitles"
+          },
+          "price": null,
+          "currency": null,
+          "booking_url": "https://www.cinemacity.cz/cinemas/zlicin/1051?lang=en_GB",
+          "availability_reported": null
+        },
+        {
+          "id": "cinema-city-zlicin-whalefall-20-10-english-audio-czech-subtitles",
+          "title": "Whalefall",
+          "starts_at": "2026-10-24T20:10:00+02:00",
+          "ends_at": null,
+          "audio": null,
+          "access": "english_audio",
+          "language_evidence": {
+            "manual_note": "English audio · Czech subtitles"
+          },
+          "price": null,
+          "currency": null,
+          "booking_url": "https://www.cinemacity.cz/cinemas/zlicin/1051?lang=en_GB",
+          "availability_reported": null
+        }
+      ]
+    }
+  ]
+}

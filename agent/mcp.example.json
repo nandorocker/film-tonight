@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "film-tonight": {
+      "command": "python3",
+      "args": ["/absolute/path/to/film-tonight/agent/mcp_stdio.py"],
+      "env": {"FILM_CONFIG": "/private/path/to/config.json"}
+    }
+  }
+}

@@ -1,0 +1,336 @@
+[
+  {
+    "id": "kino-aero",
+    "name": "Kino Aero",
+    "coordinates": [
+      14.4718677,
+      50.090078
+    ],
+    "address": "Biskupcova 31a, Žižkov",
+    "url": "https://www.kinoaero.cz/en",
+    "adapter": "aerokina"
+  },
+  {
+    "id": "cinema-city-flora",
+    "name": "Cinema City Flora",
+    "coordinates": [
+      14.4610723,
+      50.0792351
+    ],
+    "address": "Vinohradská 151, Žižkov",
+    "url": "https://www.cinemacity.cz/cinemas/flora/1052?lang=en_GB",
+    "provider_id": "1052",
+    "adapter": "cinema_city"
+  },
+  {
+    "id": "kino-atlas",
+    "name": "Kino Atlas",
+    "coordinates": [
+      14.4383706,
+      50.0915856
+    ],
+    "address": "Ke Štvanici 371/4, Karlín",
+    "url": "https://www.kinoatlaspraha.cz/",
+    "adapter": "atlas"
+  },
+  {
+    "id": "kino-pilotu",
+    "name": "Kino Pilotů",
+    "coordinates": [
+      14.446808,
+      50.071426
+    ],
+    "address": "Donská 19, Vršovice",
+    "url": "https://kinopilotu.cz/",
+    "adapter": "pilotu"
+  },
+  {
+    "id": "edison-filmhub",
+    "name": "Edison Filmhub",
+    "coordinates": [
+      14.4314144,
+      50.0848642
+    ],
+    "address": "Jeruzalémská 2, Nové Město",
+    "url": "https://edisonfilmhub.cz/en/programme",
+    "adapter": "edison"
+  },
+  {
+    "id": "bio-oko",
+    "name": "Bio Oko",
+    "coordinates": [
+      14.4301697,
+      50.1000567
+    ],
+    "address": "Františka Křížka 15, Holešovice",
+    "url": "https://www.biooko.net/en",
+    "adapter": "aerokina"
+  },
+  {
+    "id": "cinema-city-slovansky-dum",
+    "name": "Cinema City Slovanský dům",
+    "coordinates": [
+      14.428135,
+      50.085888
+    ],
+    "address": "Na Příkopě 22, Nové Město",
+    "url": "https://www.cinemacity.cz/cinemas/slovanskydum/1033?lang=en_GB",
+    "provider_id": "1033",
+    "adapter": "cinema_city"
+  },
+  {
+    "id": "kino-svetozor",
+    "name": "Kino Světozor",
+    "coordinates": [
+      14.4249627,
+      50.0818927
+    ],
+    "address": "Vodičkova 41, Nové Město",
+    "url": "https://www.kinosvetozor.cz/en",
+    "adapter": "aerokina"
+  },
+  {
+    "id": "kino-lucerna",
+    "name": "Kino Lucerna",
+    "coordinates": [
+      14.4254026,
+      50.0813695
+    ],
+    "address": "Vodičkova 36, Nové Město",
+    "url": "https://www.kinolucerna.cz/en",
+    "adapter": "aerokina"
+  },
+  {
+    "id": "kino-mat",
+    "name": "Kino MAT",
+    "coordinates": [
+      14.419362,
+      50.077843
+    ],
+    "address": "Karlovo náměstí 19, Nové Město",
+    "url": "https://www.mat.cz/kino/cz/kino-mat",
+    "adapter": "mat"
+  },
+  {
+    "id": "premiere-cinemas-hostivar",
+    "name": "Premiere Cinemas Hostivař",
+    "coordinates": [
+      14.51716,
+      50.05326
+    ],
+    "address": "Švehlova 32, Hostivař",
+    "url": "https://www.premierecinemas.cz/",
+    "adapter": "premiere_hostivar"
+  },
+  {
+    "id": "cinema-city-novy-smichov",
+    "name": "Cinema City Nový Smíchov",
+    "coordinates": [
+      14.4027925,
+      50.0741017
+    ],
+    "address": "Plzeňská 8, Smíchov",
+    "url": "https://www.cinemacity.cz/cinemas/novysmichov/1031?lang=en_GB",
+    "provider_id": "1031",
+    "adapter": "cinema_city"
+  },
+  {
+    "id": "cinestar-andel",
+    "name": "CineStar Anděl",
+    "coordinates": [
+      14.4015656,
+      50.0713056
+    ],
+    "address": "Radlická 1e, Smíchov",
+    "url": "https://cinestar.cz/cz/praha5/program",
+    "provider_id": "11",
+    "adapter": "cinestar"
+  },
+  {
+    "id": "cinema-city-letnany",
+    "name": "Cinema City Letňany",
+    "coordinates": [
+      14.5028497,
+      50.1368472
+    ],
+    "address": "Veselská 663, Letňany",
+    "url": "https://www.cinemacity.cz/cinemas/letnany/1030?lang=en_GB",
+    "provider_id": "1030",
+    "adapter": "cinema_city"
+  },
+  {
+    "id": "cinema-city-chodov",
+    "name": "Cinema City Chodov",
+    "coordinates": [
+      14.4904822,
+      50.0303447
+    ],
+    "address": "Roztylská 19, Chodov",
+    "url": "https://www.cinemacity.cz/cinemas/chodov/1056?lang=en_GB",
+    "provider_id": "1056",
+    "adapter": "cinema_city"
+  },
+  {
+    "id": "kino-kavalirka",
+    "name": "Kino Kavalírka",
+    "coordinates": [
+      14.36796,
+      50.070078
+    ],
+    "address": "Plzeňská 210, Smíchov",
+    "url": "https://www.kinokavalirka.cz/cs/uvod",
+    "adapter": "kavalirka"
+  },
+  {
+    "id": "cinestar-cerny-most",
+    "name": "CineStar Černý Most",
+    "coordinates": [
+      14.5852778,
+      50.1090125
+    ],
+    "address": "Chlumecká 6, Černý Most",
+    "url": "https://cinestar.cz/cz/praha9/program",
+    "provider_id": "12",
+    "adapter": "cinestar"
+  },
+  {
+    "id": "cinema-city-zlicin",
+    "name": "Cinema City Zličín",
+    "coordinates": [
+      14.2877942,
+      50.0543953
+    ],
+    "address": "Řevnická 1, Zličín",
+    "url": "https://www.cinemacity.cz/cinemas/zlicin/1051?lang=en_GB",
+    "provider_id": "1051",
+    "adapter": "cinema_city"
+  },
+  {
+    "id": "kino-pritomnost",
+    "name": "Kino Přítomnost",
+    "coordinates": [14.4431711, 50.0845449],
+    "address": "Siwiecova 1839/1, Žižkov",
+    "coordinates_source": "https://prague.eu/en/objevujte-kategorie/cinemas/",
+    "coordinates_verified_at": "2026-10-24",
+    "url": "https://www.kinopritomnost.cz/en",
+    "adapter": "aerokina"
+  },
+  {
+    "id": "kino-35",
+    "name": "Kino 35",
+    "coordinates": [14.4251313, 50.0788551],
+    "address": "Štěpánská 644/35, Nové Město",
+    "coordinates_source": "https://prague.eu/en/objevujte-kategorie/cinemas/",
+    "coordinates_verified_at": "2026-10-24",
+    "url": "https://kino35.ifp.cz/cz/",
+    "adapter": "kino35"
+  },
+  {
+    "id": "ponrepo",
+    "name": "Ponrepo",
+    "coordinates": [14.4177809, 50.0831922],
+    "address": "Bartolomějská 11, Staré Město",
+    "coordinates_source": "https://prague.eu/en/objevujte-kategorie/cinemas/",
+    "coordinates_verified_at": "2026-10-24",
+    "url": "https://www.nfa.cz/cs/kino-ponrepo/program/program",
+    "adapter": "ponrepo"
+  },
+  {
+    "id": "kino-evald",
+    "name": "Kino Evald",
+    "coordinates": [14.4200907, 50.0823578],
+    "address": "Národní 28, Nové Město",
+    "coordinates_source": "https://prague.eu/en/objevujte-kategorie/cinemas/",
+    "coordinates_verified_at": "2026-10-24",
+    "url": "https://www.evald.cz/",
+    "adapter": "blocked",
+    "blocker": "2026-10-24: official site returned HTTP 429; robots check also failed. Collection deferred, not evidence of closure."
+  },
+  {
+    "id": "dlabacov",
+    "name": "Dlabačov",
+    "coordinates": [14.3793893, 50.0855276],
+    "address": "Bělohorská 125/24, Břevnov",
+    "coordinates_source": "https://prague.eu/en/objevujte-kategorie/cinemas/",
+    "coordinates_verified_at": "2026-10-24",
+    "url": "https://dlabacov.cz/wp-json/bitterend/v1/events/list?language=cs",
+    "adapter": "dlabacov"
+  },
+  {
+    "id": "modransky-biograf",
+    "name": "Modřanský biograf",
+    "coordinates": [14.4046216, 50.0035083],
+    "address": "U Kina, Modřany (official directory address conflicts; verify before directions)",
+    "coordinates_source": "https://prague.eu/en/objevujte-kategorie/cinemas/",
+    "coordinates_verified_at": "2026-10-24",
+    "url": "https://www.modranskybiograf.cz/",
+    "adapter": "blocked",
+    "blocker": "2026-10-24: official site returned HTTP 429; robots check also failed. Collection deferred."
+  },
+  {
+    "id": "kino-radotin",
+    "name": "Kino Radotín",
+    "coordinates": [14.356323, 49.984128],
+    "address": "Na Výšince 875/4, Radotín",
+    "coordinates_source": "https://prague.eu/en/objevujte-kategorie/cinemas/",
+    "coordinates_verified_at": "2026-10-24",
+    "url": "https://www.kinoradotin.cz/",
+    "adapter": "blocked",
+    "blocker": "2026-10-24: official site returned HTTP 429; robots check also failed. Collection deferred."
+  },
+  {
+    "id": "kino-balt",
+    "name": "Kino Balt",
+    "coordinates": null,
+    "address": "Address changed in directories; verify official contact before directions",
+    "url": "https://kinobalt.cz/",
+    "adapter": "balt"
+  },
+  {
+    "id": "kino-petriny",
+    "name": "Kino Petřiny",
+    "coordinates": null,
+    "address": "U Petřin 2511/1, Praha 6",
+    "url": "https://www.mlp.cz/petriny",
+    "adapter": "not_implemented",
+    "blocker": "Discovered in directory audit 2026-10-24. Programme integration remains unfinished; not a closure or access restriction."
+  },
+  {
+    "id": "kino-ustredni-knihovna",
+    "name": "Kino Ústřední knihovna",
+    "coordinates": null,
+    "address": "Mariánské náměstí 1, Praha 1",
+    "url": "https://www.mlp.cz/akce",
+    "adapter": "not_implemented",
+    "blocker": "Discovered in official municipal-library cinema reference 2026-10-24. Programme integration unfinished."
+  },
+  {
+    "id": "divadlo-za-plotem",
+    "name": "Divadlo Za plotem",
+    "coordinates": [14.4190364, 50.134568],
+    "coordinates_source": "https://prague.eu/en/objevujte-kategorie/cinemas/",
+    "coordinates_verified_at": "2026-10-24",
+    "address": "Ústavní 249, Bohnice",
+    "url": "https://divadlo.bohnice.cz/",
+    "adapter": "not_implemented",
+    "blocker": "Official programme confirmed 2026-10-24; collection integration unfinished."
+  },
+  {
+    "id": "divadlo-horni-pocernice",
+    "name": "Divadlo Horní Počernice",
+    "coordinates": null,
+    "address": "Votuzská 379/11, Praha 20",
+    "url": "https://divadlopocernice.cz/program?category=film",
+    "adapter": "not_implemented",
+    "blocker": "Official film programme confirmed 2026-10-24; collection integration unfinished."
+  },
+  {
+    "id": "kc-beseda",
+    "name": "KC Beseda Klánovice",
+    "coordinates": null,
+    "address": "Slavětínská 1029, Klánovice",
+    "url": "https://www.kcbeseda.eu/",
+    "adapter": "not_implemented",
+    "blocker": "Official programme confirmed 2026-10-24; collection integration unfinished."
+  }
+]

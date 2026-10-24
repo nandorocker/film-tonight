@@ -1,0 +1,10 @@
+.git
+node_modules
+.wrangler
+.dev.vars
+.env*
+dist
+data
+__pycache__
+*.sqlite*
+test-results

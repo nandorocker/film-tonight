@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#edf5fc">
+  <meta name="description" content="Prague cinema showtimes with screening-specific English access and source evidence.">
+  <title>Film tonight · Prague</title>
+  <link rel="stylesheet" href="/style.css">
+  <script type="module" src="/app.js"></script>
+</head>
+<body>
+  <a class="skip" href="#listings">Skip to showtimes</a>
+  <main>
+    <header><h1>Film tonight<span>Prague cinema, in English.</span></h1><p>All times Europe/Prague<br>Check the cinema before you go.</p></header>
+    <p id="demo-banner" class="notice" hidden>Historical demo — these are example listings, not current showtimes or ticket availability.</p>
+    <form id="filters" aria-label="Filter showtimes">
+      <div class="filter-line">
+        <label>Date<input id="date" name="date" type="date" required></label>
+        <label>From<input name="after" type="time" value="18:00" required></label>
+        <label>English access<select name="access"><option value="confirmed">Confirmed English access</option><option value="english_audio">English audio</option><option value="english_subtitles">English subtitles</option><option value="english_friendly">English-friendly</option><option value="all">All, including uncertain</option></select></label>
+        <label class="search">Film search<input name="q" type="search" placeholder="Find a film" autocomplete="off"></label>
+      </div>
+      <div class="filter-bottom"><label class="inline"><input name="remaining" type="checkbox" checked> Only upcoming starts</label><details><summary>More filters</summary><div class="filter-line extras">
+        <label>Cinema<select name="venue" id="venue"><option value="">All cinemas</option></select></label>
+        <label>Format<input name="format" placeholder="e.g. IMAX"></label>
+        <label>Time to get ready (minutes)<input name="buffer_minutes" type="number" min="0" max="240" value="0"></label>
+        <label>Within<select name="radius_km" id="radius"><option value="">Any distance</option><option value="1">1 km</option><option value="3">3 km</option><option value="5">5 km</option><option value="10">10 km</option></select></label>
+        <button id="locate" type="button">Use my location</button><button id="clear-location" type="button" hidden>Clear location</button>
+        <p id="location-status" class="hint">Location stays in this page only. Radius filtering needs your permission.</p>
+      </div></details></div>
+    </form>
+    <section id="listings" aria-labelledby="results-heading" tabindex="-1">
+      <div class="results-heading"><h2 id="results-heading">Showtimes</h2><button id="refresh" type="button">Refresh listings</button></div>
+      <p id="status" role="status" aria-live="polite">Loading cinema listings…</p>
+      <div id="results" aria-busy="true"></div>
+    </section>
+    <details id="coverage"><summary>Coverage &amp; freshness</summary><div id="coverage-content">Waiting for listings.</div></details>
+    <section class="map-section" aria-labelledby="map-heading"><div class="results-heading"><h2 id="map-heading">Find the cinema</h2><button id="show-map" type="button">Show map</button></div><p id="map-status" class="hint">The map uses the same filtered showtimes. Loading it contacts OpenStreetMap for tiles.</p><div id="map" hidden aria-label="Cinema map"></div></section>
+    <footer>Language access is screening-specific. Expand “Evidence” to see the source. Listings are cached, not a guarantee of admission. Location is never added to a URL or saved.</footer>
+  </main>
+</body>
+</html>

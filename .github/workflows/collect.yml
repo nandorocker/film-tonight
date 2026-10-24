@@ -1,0 +1,28 @@
+name: Collect Prague programmes
+on:
+  schedule:
+    - cron: '3,13,23,33,43,53 * * * *'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: cinema-collection
+  cancel-in-progress: false
+jobs:
+  collect:
+    if: vars.FILM_API_URL != ''
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - name: Collect official sources and publish sanitized observations
+        env:
+          FILM_API_URL: ${{ vars.FILM_API_URL }}
+          FILM_INGEST_TOKEN: ${{ secrets.FILM_INGEST_TOKEN }}
+        run: |
+          test -n "$FILM_API_URL"
+          test -n "$FILM_INGEST_TOKEN"
+          python collector_job.py

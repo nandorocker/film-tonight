@@ -1,0 +1,17 @@
+data/
+__pycache__/
+tests/__pycache__/
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+node_modules/
+.wrangler/
+.dev.vars
+.env*
+dist/
+data/
+__pycache__/
+*.pyc
+*.sqlite*
+playwright-report/
+test-results/

@@ -1,0 +1,9 @@
+name = "film-tonight"
+compatibility_date = "2026-10-24"
+pages_build_output_dir = "dist"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "film-tonight"
+database_id = "ea1eecab-bfba-4b0a-be39-784622d85296"
+migrations_dir = "migrations"
