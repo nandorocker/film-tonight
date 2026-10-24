@@ -143,6 +143,8 @@ of model-cost savings, live free-tier headroom or production readiness are made.
 - Production deployment: `5685ce09.film-tonight.pages.dev`; D1 in WEUR.
 - Deployed Chromium: 104 rows for October 25, table visible 338.51 ms after date
   selection, 15 mapped locations, no page errors. Single observation, not a p95.
+- Subsequent deployed 390px mobile check: 107 rows, no document horizontal
+  overflow, map visible, no page errors.
 - 30 deployed API requests: median 262.14 ms, p95 424.23 ms; 104 results, 20/31
   fresh venues. Includes network round-trip and JSON decoding, not Worker CPU.
 - Generic Python user-agents received edge 403/1010; descriptive `FilmTonight/1.0`
@@ -150,11 +152,30 @@ of model-cost savings, live free-tier headroom or production readiness are made.
 - Focused deployment-client review accepted one diagnostic fix: a failed edge
   tail must return nonzero with a sanitized error, not silently appear successful.
 - The tail captured no usable CPU events. CPU/free-tier suitability is not proven.
+- Deployed health/readiness and dated reads returned 200; unauthenticated refresh
+  and ingestion returned 401 with the descriptive client user-agent.
+- D1 info after manual publication: 4,870,144 bytes; reported 24-hour counters
+  157,448 rows read and 158 written. These are a dated snapshot, not a sustained
+  workload/quota guarantee. No usable Worker CPU measurements were obtained.
+- Final repeated browser suite: initial attempt failed because the local emulator
+  was stopped; after starting it, all five tests passed (4.7 s). Tail failure was
+  tested with a stub subprocess: nonzero exit and fixed sanitized error passed.
+- GitHub hosted offline tests passed:
+  https://github.com/nandorocker/film-tonight/actions/runs/40133897566.
+- First manually dispatched hosted collection passed:
+  https://github.com/nandorocker/film-tonight/actions/runs/40133897947. All 23
+  supported observations published without source/publication errors; the deployed
+  snapshot subsequently showed all 23 at generation `2026-10-24T21:22:12.779Z`.
+  October 25 then returned 107 confirmed rows and 21/31 fresh venues, illustrating
+  why counts and date-specific freshness are not fixed acceptance constants.
+  Workflow is active with ten-minute cron configured;
+  no successful `schedule` event is yet evidenced. Personal refresh authentication
+  successfully queued a real cloud job for the next collection.
 
 ## Outstanding acceptance gates
 
-1. Verify real edge CPU/headroom, source access from GitHub-hosted runners,
-   scheduled execution/recovery and quota behavior. Actions timing is best effort;
+1. Verify real edge CPU/headroom, scheduled execution/recovery and quota behavior.
+   Source access/publication from a GitHub-hosted runner passed. Actions timing is best effort;
    public schedules can disable after 60 days of repository inactivity.
 2. Native Hermes/Telegram location handling has not been changed.
 3. Finish the five known regular venue integrations and seasonal audit; recheck

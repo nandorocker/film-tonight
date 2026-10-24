@@ -9,7 +9,8 @@
 - [x] Portable Hermes client/MCP and table-first instructions; personal-profile skill installed and native smoke passed.
 - [x] Offline resilience/security tests, live source checks, browser checks and reviews.
 - [x] Pages/D1 deployed at https://film-tonight.pages.dev/ with separate write credentials.
-- [ ] Hosted collection/scheduled execution verified and operational handover completed.
+- [x] GitHub-hosted collection/publication and offline CI passed; operational docs updated.
+- [ ] Observe an actual scheduled event and verify edge CPU/quota headroom.
 
 The UI may be public, but private home configuration is only on the Hermes
 personal profile. No credentials or private origins belong in this repository.

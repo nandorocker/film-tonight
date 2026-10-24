@@ -62,4 +62,8 @@ All original 25 now have coordinates. Missing seven were checked against officia
 
 Evald, Modřany and Radotín returned HTTP 429 in the bounded October 24 audit, with unavailable robots responses. Their collection is deferred, not bypassed or called closed. Recheck access restrictions conservatively before adding their collectors. Raw captures remain private local diagnostic files, outside Git. Public source links and normalized facts do not establish permission for bulk redistribution.
 
-Cloud CPU limits, real deployed scheduling, private UI admission and Hermes installation remain separate deployment gates; see [validation](VALIDATION.md).
+Pages/D1 is deployed and the personal Hermes skill passed a native smoke test.
+Cloud CPU/quota headroom and real scheduled execution remain verification gates;
+UI/API are intentionally public and sanitized. The dated table above is local
+audit evidence, not a continually updated production status; use `/api/v1/coverage`
+for current checks. See [validation](VALIDATION.md).
