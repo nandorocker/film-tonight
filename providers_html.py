@@ -476,6 +476,10 @@ def parse_dlabacov(source, venue, day):
                     audio = [languages.get(label.lower(), 'und') for label in audio_labels]
                     booking = _url(session.get('ticketLink') or session.get('goOutSaleUrl') or
                                    session.get('link'), venue)
+                    # Keep unapproved ticketing origins out of cloud publication;
+                    # the venue's official event page remains a useful fallback.
+                    if urlsplit(booking).hostname not in (urlsplit(venue['url']).hostname, 'goout.net'):
+                        booking = _url(session.get('link'), venue)
                     provider_id = session.get('goOutId') or _identity(booking, start)
                     # Loaded official JS renders audio as "Audio: ...", 66 as
                     # dubbing and 67 as generic subtitles, NOT English subtitles.

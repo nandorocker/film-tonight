@@ -183,6 +183,19 @@ class HtmlProvidersTest(unittest.TestCase):
             with self.assertRaises(ValueError):
                 self.parse('dlabacov', source)
 
+    def test_dlabacov_unapproved_ticket_origin_uses_official_event_page(self):
+        source = json.loads(fixture('dlabacov'))
+        session = source['data']['2026']['10']['24.10'][0]
+        session['ticketLink'] = 'https://share.akcelerator.events/cs/akce/example'
+        session['goOutId'] = ''
+        session['link'] = 'https://cinema.example/program/example/'
+        _, rows = self.parse('dlabacov', json.dumps(source))
+        self.assertEqual(rows[0]['booking_url'], session['link'])
+        self.assertNotEqual(rows[0]['id'], rows[1]['id'])
+        session['ticketLink'] = 'https://goout.net/cs/listky/example/one/'
+        _, rows = self.parse('dlabacov', json.dumps(source))
+        self.assertEqual(rows[0]['booking_url'], session['ticketLink'])
+
     def test_dlabacov_unknown_mixed_audio_never_becomes_english_only(self):
         source = fixture('dlabacov').replace('["Angličtina"]', '["Angličtina", "Unknown label"]')
         _, rows = self.parse('dlabacov', source)
