@@ -28,6 +28,20 @@ test('first fetch failure and subsequent refresh failure are honest',async({page
 function responseFor(date) {
   return {schema_version:2,service_date:date,venues:[{id:'test',name:'Test cinema',coordinates:[14.4,50.1]}],snapshots:[{venue_id:'test',generation:new Date().toISOString(),checked_at:new Date().toISOString(),dates:[date],screenings:[{id:date,title:'Film for '+date,starts_at:date+'T23:59:00+02:00',access:'english_audio',booking_url:'https://cinema.example/'}]}],attempts:[]};
 }
+test('ticket and screening-source links go directly to the cinema instead of third parties',async({page})=>{
+  await page.clock.install({time:new Date('2026-10-24T17:00:00Z')});
+  await page.route('**/api/v1/snapshot*',route=>{
+    const data=responseFor('2026-10-24');data.venues[0].url='https://cinema.example/programme';
+    const row=data.snapshots[0].screenings[0];
+    row.booking_url='https://goout.net/en/tickets/movie/123/';row.source_url='https://www.ticketportal.cz/event/123';
+    return route.fulfill({json:data});
+  });
+  await page.goto('/');
+  await expect(page.locator('a.ticket')).toHaveAttribute('href','https://cinema.example/programme');
+  await page.locator('td details summary').click();
+  await expect(page.getByRole('link',{name:'Screening source'})).toHaveAttribute('href','https://cinema.example/programme');
+  await expect(page.locator('a[href*="goout.net"], a[href*="ticketportal.cz"]')).toHaveCount(0);
+});
 for (const width of [320,390,700]) {
   test(`mobile stays within ${width}px with long listings and expanded filters`,async({browser})=>{
     const context=await browser.newContext({viewport:{width,height:844},isMobile:true,hasTouch:true});

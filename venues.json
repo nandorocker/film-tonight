@@ -254,6 +254,7 @@
     "coordinates_source": "https://prague.eu/en/objevujte-kategorie/cinemas/",
     "coordinates_verified_at": "2026-10-24",
     "url": "https://dlabacov.cz/wp-json/bitterend/v1/events/list?language=cs",
+    "website_url": "https://dlabacov.cz/",
     "adapter": "dlabacov"
   },
   {

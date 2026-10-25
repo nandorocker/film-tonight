@@ -9,6 +9,17 @@ export function distanceKm(a,b) {
   const r=x=>x*Math.PI/180, dlat=r(b[1]-a[1]),dlon=r(b[0]-a[0]);
   return 6371*2*Math.asin(Math.min(1,Math.sqrt(Math.sin(dlat/2)**2+Math.cos(r(a[1]))*Math.cos(r(b[1]))*Math.sin(dlon/2)**2)));
 }
+function cinemaLink(url,officialUrl) {
+  try {
+    const official=new URL(officialUrl), candidate=new URL(url);
+    if(!['https:','http:'].includes(official.protocol)||official.username||official.password)return null;
+    if(['https:','http:'].includes(candidate.protocol)&&!candidate.username&&!candidate.password&&candidate.hostname.replace(/^www\./,'')===official.hostname.replace(/^www\./,''))return candidate.href;
+  } catch { /* Missing or invalid links fall back to the official cinema page. */ }
+  try {
+    const official=new URL(officialUrl);
+    return ['https:','http:'].includes(official.protocol)&&!official.username&&!official.password?official.href:null;
+  } catch { return null; }
+}
 export function filters(input={}, now=new Date()) {
   const f={date:pragueDate(now),after:'18:00',remaining:true,buffer_minutes:0,access:'confirmed',venue:'',q:'',format:'',origin:null,radius_km:null,...input};
   if (!/^\d{4}-\d{2}-\d{2}$/.test(f.date)||!Number.isFinite(Date.parse(f.date))||new Date(f.date).toISOString().slice(0,10)!==f.date) throw new Error('Use a valid YYYY-MM-DD date');
@@ -49,7 +60,7 @@ export function select(snapshot,input={},now=new Date()) {
       if(f.radius_km!==null&&(distance===null||distance>f.radius_km)){excluded.add(venue.id);continue;}
       if(!venue.coordinates)unmapped.add(venue.id);
       screenings.push({...row,venue_id:venue.id,venue:venue.name,coordinates:venue.coordinates,distance_km:distance===null?null:Math.round(distance*10)/10,
-        checked_at:s.checked_at,freshness:state,origin:demo?'manual_sample':'live',source_url:row.source_url||venue.url});
+        checked_at:s.checked_at,freshness:state,origin:demo?'manual_sample':'live',booking_url:cinemaLink(row.booking_url,venue.website_url||venue.url),source_url:cinemaLink(row.source_url,venue.url)});
     }
     coverage.push({...venue,state,checked_at:s?.checked_at??null,last_attempt:attempts.get(venue.id)??null,counts,
       horizon:s?.dates||[],blocker:venue.blocker??null});
