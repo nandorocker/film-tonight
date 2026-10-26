@@ -1,4 +1,4 @@
-from contextlib import closing
+from contextlib import closing, redirect_stderr, redirect_stdout
 from datetime import datetime, timedelta
 import io
 import json
@@ -8,12 +8,32 @@ import tempfile
 import unittest
 import threading
 import time
+from urllib.error import HTTPError
 from unittest.mock import patch
 
 import collector_job as job
 import moviecache as m
 
 class OperationsTests(unittest.TestCase):
+    def test_publication_failure_continues_other_venues_and_marks_job_failed(self):
+        def refresh(db,*args,**kwargs):
+            checked=m.utcnow()
+            with db:
+                for venue_id in ('first','second'):
+                    db.execute('INSERT INTO attempts(venue_id,service_date,checked_at,outcome,detail) VALUES(?,?,?,?,?)',
+                               (venue_id,'2026-10-26',checked,'error','Collection failed'))
+            return [{'venue_id':v,'outcome':'error'} for v in ('first','second')]
+        logs=io.StringIO()
+        error=HTTPError('https://secret.example/token',503,'private',{},None)
+        with tempfile.TemporaryDirectory() as temp,patch.object(job,'urlopen',return_value=io.BytesIO(b'{"snapshots":[]}')) as read,patch.object(m,'refresh',side_effect=refresh),patch.object(job,'publish',side_effect=[error,{},{}]) as publish,redirect_stderr(logs),redirect_stdout(io.StringIO()):
+            # Snapshot reads need a fresh context-managed response per date.
+            read.side_effect=lambda *args,**kwargs:io.BytesIO(b'{"snapshots":[]}')
+            with self.assertRaises(RuntimeError):job.run(Path(temp)/'cache.sqlite','https://cloud.example','test-only')
+        self.assertEqual([c.args[2] for c in publish.call_args_list],['internal/ingest','internal/ingest','internal/jobs'])
+        self.assertEqual(publish.call_args_list[1].args[3]['venue_id'],'second')
+        self.assertTrue(publish.call_args_list[2].args[3]['failed'])
+        self.assertEqual(json.loads(logs.getvalue()),{'venue_id':'first','outcome':'publication_error','type':'HTTPError','http_status':503})
+
     def test_fresh_scheduled_runner_restores_collapse_baseline(self):
         tomorrow=datetime.now(m.PRAGUE).date()+timedelta(days=1)
         start=datetime.combine(tomorrow,datetime.min.time().replace(hour=20),m.PRAGUE).isoformat()

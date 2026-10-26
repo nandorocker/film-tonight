@@ -14,3 +14,13 @@ test('refresh jobs coalesce and completion is bounded by collection generation',
 test('cloud API refuses private origin URLs',async()=>{const r=await handle(new Request('https://test/api/v1/screenings?origin=14,50'),{DB:new D1()});assert.equal(r.status,400);});
 test('job completion normalizes offset timestamps; retention uses UTC format',async()=>{const DB=new D1();const now=Date.now();await DB.prepare('INSERT INTO refresh_requests VALUES(?,?,?)').bind('new',new Date(now-3600000).toISOString(),'queued').run();await DB.prepare('INSERT INTO refresh_requests VALUES(?,?,?)').bind('expired',new Date(now-8*86400000).toISOString(),'complete').run();const old=new Date(now-7200000).toISOString().replace('Z','+00:00');const req=new Request('https://test/api/v1/internal/jobs',{method:'POST',headers:{Authorization:'Bearer ingest','Content-Type':'application/json'},body:JSON.stringify({generation:old})});assert.equal((await handle(req,{DB,INGEST_TOKEN:'ingest'})).status,200);assert.equal((await DB.prepare("SELECT state FROM refresh_requests WHERE id='new'").first()).state,'queued');assert.equal(await DB.prepare("SELECT * FROM refresh_requests WHERE id='expired'").first(),null);});
 test('dated snapshot projects rows in SQL while retaining horizon',async()=>{const DB=new D1();await ingest(DB,validate(payload()));const r=await snapshot(DB,'2026-10-25');assert.deepEqual(r.snapshots[0].screenings,[]);assert.deepEqual(r.snapshots[0].dates,['2026-10-24']);});
+test('replayed jobs completion leaves later refresh requests queued',async()=>{
+  const DB=new D1(),generation=new Date(Date.now()-60000).toISOString(),env={DB,INGEST_TOKEN:'test-only'};
+  await DB.prepare('INSERT INTO refresh_requests VALUES(?,?,?)').bind('old',new Date(Date.now()-120000).toISOString(),'queued').run();
+  const complete=()=>handle(new Request('https://test/api/v1/internal/jobs',{method:'POST',headers:{Authorization:'Bearer test-only','Content-Type':'application/json'},body:JSON.stringify({generation,failed:true})}),env);
+  assert.equal((await complete()).status,200);
+  await DB.prepare('INSERT INTO refresh_requests VALUES(?,?,?)').bind('new',new Date().toISOString(),'queued').run();
+  assert.equal((await complete()).status,200);
+  assert.equal((await DB.prepare("SELECT state FROM refresh_requests WHERE id='old'").first()).state,'complete_with_errors');
+  assert.equal((await DB.prepare("SELECT state FROM refresh_requests WHERE id='new'").first()).state,'queued');
+});

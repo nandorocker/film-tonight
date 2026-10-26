@@ -3,22 +3,51 @@
 import argparse
 from contextlib import closing
 from datetime import datetime, timedelta
+from email.utils import parsedate_to_datetime
 import json
 import os
 from pathlib import Path
 import sys
 import time
 from urllib.request import Request, urlopen
-from urllib.error import HTTPError
+from urllib.error import HTTPError, URLError
 
 import moviecache as m
 from providers import PARSER_VERSION
 
+def error_fields(error):
+    fields={'type':type(error).__name__}
+    if isinstance(error,HTTPError):
+        fields['http_status']=error.code
+    return fields
+
 def publish(base, token, path, value):
     request = Request(base.rstrip('/')+'/api/v1/'+path, data=json.dumps(value, ensure_ascii=False).encode(),
                       headers={'User-Agent':'FilmTonight/1.0','Content-Type':'application/json','Authorization':'Bearer '+token}, method='POST')
-    with urlopen(request, timeout=30) as response:
-        return json.load(response)
+    # Replay the same generation/body: cloud writes are ordered and idempotent.
+    for attempt in range(3):
+        delay=2**attempt
+        try:
+            with urlopen(request, timeout=30) as response:
+                return json.load(response)
+        except HTTPError as error:
+            try:
+                if error.code not in (429,500,502,503,504) or attempt==2:
+                    raise
+                retry=error.headers.get('Retry-After','').strip()
+                if retry:
+                    try:
+                        delay=int(retry) if retry.isdigit() else max(0,(parsedate_to_datetime(retry)-datetime.now(m.UTC)).total_seconds())
+                    except (TypeError,ValueError,OverflowError):
+                        pass  # Malformed advice uses the short default backoff.
+                if delay>30:
+                    raise
+            finally:
+                error.close()
+        except (URLError,TimeoutError,ConnectionError):
+            if attempt==2:
+                raise
+        time.sleep(delay)
 
 def prune(db, days=30):
     cutoff=(datetime.now(m.UTC)-timedelta(days=days)).isoformat()
@@ -81,7 +110,7 @@ def run(db_path, base=None, token=None):
                     publish(base,token,'internal/ingest',payload)
                 except Exception as error:
                     publication_errors.append(venue_id)
-                    print(json.dumps({'venue_id':venue_id,'outcome':'publication_error','type':type(error).__name__}),file=sys.stderr,flush=True)
+                    print(json.dumps({'venue_id':venue_id,'outcome':'publication_error',**error_fields(error)}),file=sys.stderr,flush=True)
                     continue
             print(json.dumps({'venue_id':venue_id,'outcome':payload['outcome'],'count':len(payload.get('screenings',[]))}),flush=True)
         prune(db)
@@ -105,7 +134,7 @@ if __name__=='__main__':
             print(json.dumps(report),flush=True)
         except Exception as error:
             # Avoid emitting credential-bearing URLs/HTTP headers or bodies.
-            print(json.dumps({'outcome':'job_error','type':type(error).__name__}),file=sys.stderr,flush=True)
+            print(json.dumps({'outcome':'job_error',**error_fields(error)}),file=sys.stderr,flush=True)
             if not args.watch:sys.exit(1)
         if not args.watch:break
         time.sleep(args.watch)
