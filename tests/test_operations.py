@@ -9,12 +9,43 @@ import unittest
 import threading
 import time
 from urllib.error import HTTPError
+from http.client import RemoteDisconnected
 from unittest.mock import patch
 
 import collector_job as job
 import moviecache as m
 
 class OperationsTests(unittest.TestCase):
+    def test_startup_snapshot_recovery_precedes_collection(self):
+        for error in (TimeoutError('secret'),RemoteDisconnected('secret')):
+            with self.subTest(error=type(error).__name__),tempfile.TemporaryDirectory() as temp:
+                responses=[error]+[io.BytesIO(b'{"snapshots":[]}') for _ in range(7)]
+                with patch.object(job,'urlopen',side_effect=responses) as read,patch.object(m,'refresh',return_value=[]) as refresh,patch.object(job,'publish') as publish,patch.object(job.time,'sleep'),redirect_stderr(io.StringIO()):
+                    result=job.run(Path(temp)/'cache.sqlite','https://cloud.example','test-only')
+                self.assertEqual(read.call_count,8)
+                refresh.assert_called_once()
+                self.assertEqual(result['outcome'],'complete')
+                self.assertEqual(result['failed_venues'],[])
+                publish.assert_called_once()
+                self.assertFalse(publish.call_args.args[-1]['failed'])
+
+    def test_exhausted_later_baseline_read_never_seeds_or_publishes_partial_data(self):
+        with tempfile.TemporaryDirectory() as temp:
+            path=Path(temp)/'cache.sqlite'
+            first=io.BytesIO(b'{"snapshots":[{"venue_id":"prior","screenings":[]}]}')
+            logs=io.StringIO()
+            with patch.object(job,'urlopen',side_effect=[first,TimeoutError('secret'),TimeoutError('secret'),TimeoutError('secret')]) as read,patch.object(m,'connect') as connect,patch.object(m,'refresh') as refresh,patch.object(job,'publish') as publish,patch.object(job.time,'sleep'),redirect_stderr(logs):
+                with self.assertRaises(TimeoutError):job.run(path,'https://cloud.example','test-only')
+            self.assertEqual(read.call_count,4)
+            connect.assert_not_called()
+            refresh.assert_not_called()
+            publish.assert_not_called()
+            self.assertFalse(path.exists())
+            events=[json.loads(line) for line in logs.getvalue().splitlines()]
+            self.assertEqual([e['outcome'] for e in events],['request_retry','request_retry','request_error'])
+            self.assertTrue(all(e['operation']=='snapshot_read' for e in events))
+            self.assertNotIn('secret',logs.getvalue())
+
     def test_publication_failure_continues_other_venues_and_marks_job_failed(self):
         def refresh(db,*args,**kwargs):
             checked=m.utcnow()
@@ -45,8 +76,11 @@ class OperationsTests(unittest.TestCase):
             data={'snapshots':[programme] if tomorrow.isoformat() in url.full_url else []}
             return io.BytesIO(json.dumps(data).encode())
         result={'venue':venue,'dates':{tomorrow.isoformat()},'rows':old[:5],'body':'fixture','etag':None,'modified':None,'raw_sha':'a'*64,'seconds':0}
-        with tempfile.TemporaryDirectory() as temp, patch.object(job,'urlopen',side_effect=previous),patch.object(m,'registry',return_value=[venue]),patch.object(m,'collect',return_value=result),patch.object(job,'publish') as publish:
-            job.run(Path(temp)/'new.sqlite','https://cloud.example','not-a-real-token')
+        with tempfile.TemporaryDirectory() as temp, patch.object(job,'urlopen',side_effect=previous),patch.object(m,'registry',return_value=[venue]),patch.object(m,'collect',return_value=result),patch.object(job,'publish') as publish,patch.dict(job.os.environ,{'GITHUB_ACTIONS':'true'}),redirect_stdout(io.StringIO()) as output:
+            report=job.run(Path(temp)/'new.sqlite','https://cloud.example','not-a-real-token')
+            self.assertEqual(report['outcome'],'complete_with_errors')
+            self.assertEqual(report['failed_venues'],['test'])
+            self.assertIn('::warning::Collection completed with source errors: test',output.getvalue())
             observation=publish.call_args_list[0].args[-1]
             self.assertEqual(observation['outcome'],'error')
             with closing(m.connect(Path(temp)/'new.sqlite')) as db:

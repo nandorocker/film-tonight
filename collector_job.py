@@ -21,33 +21,44 @@ def error_fields(error):
         fields['http_status']=error.code
     return fields
 
+def request_json(request, operation):
+    # Startup reads need the same protection as idempotent publication writes.
+    for attempt in range(3):
+        delay=2**attempt
+        try:
+            try:
+                with urlopen(request, timeout=30) as response:
+                    return json.load(response)
+            except HTTPError as error:
+                try:
+                    if error.code not in (429,500,502,503,504) or attempt==2:
+                        raise
+                    retry=error.headers.get('Retry-After','').strip()
+                    if retry:
+                        try:
+                            delay=int(retry) if retry.isdigit() else max(0,(parsedate_to_datetime(retry)-datetime.now(m.UTC)).total_seconds())
+                        except (TypeError,ValueError,OverflowError):
+                            pass  # Malformed advice uses the short default backoff.
+                    if delay>30:
+                        raise
+                    retry_fields=error_fields(error)
+                finally:
+                    error.close()
+            except (URLError,TimeoutError,ConnectionError) as error:
+                if attempt==2:
+                    raise
+                retry_fields=error_fields(error)
+        except Exception as error:
+            print(json.dumps({'outcome':'request_error','operation':operation,'attempt':attempt+1,**error_fields(error)}),file=sys.stderr,flush=True)
+            raise
+        print(json.dumps({'outcome':'request_retry','operation':operation,'attempt':attempt+1,**retry_fields}),file=sys.stderr,flush=True)
+        time.sleep(delay)
+
 def publish(base, token, path, value):
     request = Request(base.rstrip('/')+'/api/v1/'+path, data=json.dumps(value, ensure_ascii=False).encode(),
                       headers={'User-Agent':'FilmTonight/1.0','Content-Type':'application/json','Authorization':'Bearer '+token}, method='POST')
     # Replay the same generation/body: cloud writes are ordered and idempotent.
-    for attempt in range(3):
-        delay=2**attempt
-        try:
-            with urlopen(request, timeout=30) as response:
-                return json.load(response)
-        except HTTPError as error:
-            try:
-                if error.code not in (429,500,502,503,504) or attempt==2:
-                    raise
-                retry=error.headers.get('Retry-After','').strip()
-                if retry:
-                    try:
-                        delay=int(retry) if retry.isdigit() else max(0,(parsedate_to_datetime(retry)-datetime.now(m.UTC)).total_seconds())
-                    except (TypeError,ValueError,OverflowError):
-                        pass  # Malformed advice uses the short default backoff.
-                if delay>30:
-                    raise
-            finally:
-                error.close()
-        except (URLError,TimeoutError,ConnectionError):
-            if attempt==2:
-                raise
-        time.sleep(delay)
+    return request_json(request,'job_completion' if path=='internal/jobs' else 'publication')
 
 def prune(db, days=30):
     cutoff=(datetime.now(m.UTC)-timedelta(days=days)).isoformat()
@@ -69,8 +80,7 @@ def run(db_path, base=None, token=None):
         for offset in range(7):
             day=(today+timedelta(days=offset)).isoformat()
             request=Request(base.rstrip('/')+'/api/v1/snapshot?date='+day,headers={'User-Agent':'FilmTonight/1.0','Accept':'application/json'})
-            with urlopen(request,timeout=30) as response:
-                previous=json.load(response)
+            previous=request_json(request,'snapshot_read')
             for programme in previous.get('snapshots',[]):
                 entry=prior.setdefault(programme['venue_id'],dict(programme,screenings=[]))
                 entry['screenings'].extend(programme['screenings'])
@@ -114,11 +124,14 @@ def run(db_path, base=None, token=None):
                     continue
             print(json.dumps({'venue_id':venue_id,'outcome':payload['outcome'],'count':len(payload.get('screenings',[]))}),flush=True)
         prune(db)
+    failed_venues=sorted(r['venue_id'] for r in reports if r['outcome']=='error')
     if base:
-        publish(base,token,'internal/jobs',{'generation':generation,'failed':bool(publication_errors or any(r['outcome']=='error' for r in reports))})
+        publish(base,token,'internal/jobs',{'generation':generation,'failed':bool(publication_errors or failed_venues)})
     if publication_errors:
         raise RuntimeError('Publication failed for '+','.join(publication_errors))
-    return {'generation':generation,'results':reports}
+    if failed_venues and os.environ.get('GITHUB_ACTIONS')=='true':
+        print('::warning::Collection completed with source errors: '+','.join(failed_venues),flush=True)
+    return {'generation':generation,'outcome':'complete_with_errors' if failed_venues else 'complete','failed_venues':failed_venues,'results':reports}
 
 if __name__=='__main__':
     p=argparse.ArgumentParser(description=__doc__)

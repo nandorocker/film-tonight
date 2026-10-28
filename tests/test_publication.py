@@ -1,10 +1,13 @@
 from datetime import datetime, timedelta
+from contextlib import redirect_stderr
 from email.utils import format_datetime
+from http.client import RemoteDisconnected
 import io
 import json
 import unittest
 from unittest.mock import patch
 from urllib.error import HTTPError, URLError
+from urllib.request import Request
 
 import collector_job as job
 
@@ -15,6 +18,12 @@ def http_error(status, retry=None):
 
 
 class PublicationTests(unittest.TestCase):
+    def setUp(self):
+        self.logs=io.StringIO()
+        context=redirect_stderr(self.logs)
+        context.__enter__()
+        self.addCleanup(context.__exit__,None,None,None)
+
     def publish(self,path='internal/ingest'):
         return job.publish('https://cloud.example','test-only',path,{'generation':'2026-10-26T12:00:00Z','failed':False})
 
@@ -88,6 +97,30 @@ class PublicationTests(unittest.TestCase):
     def test_error_fields_do_not_expose_secrets(self):
         self.assertEqual(job.error_fields(http_error(503)),{'type':'HTTPError','http_status':503})
         self.assertEqual(job.error_fields(URLError('https://secret:token@example.com/private')),{'type':'URLError'})
+
+    def test_snapshot_read_retries_disconnect_timeout_and_urlerror(self):
+        for error in (RemoteDisconnected('secret'),TimeoutError('secret'),URLError('secret')):
+            with self.subTest(error=type(error).__name__):
+                self.logs.seek(0);self.logs.truncate()
+                request=Request('https://cloud.example/api/v1/snapshot?date=2026-10-28')
+                with patch.object(job,'urlopen',side_effect=[error,io.BytesIO(b'{"snapshots":[]}')]) as send,patch.object(job.time,'sleep') as sleep:
+                    self.assertEqual(job.request_json(request,'snapshot_read'),{'snapshots':[]})
+                self.assertEqual(send.call_count,2)
+                self.assertEqual(request.get_method(),'GET')
+                sleep.assert_called_once_with(1)
+                self.assertEqual(json.loads(self.logs.getvalue()),{'outcome':'request_retry','operation':'snapshot_read','attempt':1,'type':type(error).__name__})
+
+    def test_terminal_errors_identify_operation_without_response_secrets(self):
+        for operation in ('snapshot_read','publication','job_completion'):
+            with self.subTest(operation=operation):
+                self.logs.seek(0);self.logs.truncate()
+                with patch.object(job,'urlopen',side_effect=http_error(401)) as send,patch.object(job.time,'sleep') as sleep:
+                    with self.assertRaises(HTTPError):
+                        if operation=='snapshot_read':job.request_json(Request('https://secret.example'),'snapshot_read')
+                        else:self.publish('internal/jobs' if operation=='job_completion' else 'internal/ingest')
+                send.assert_called_once()
+                sleep.assert_not_called()
+                self.assertEqual(json.loads(self.logs.getvalue()),{'outcome':'request_error','operation':operation,'attempt':1,'type':'HTTPError','http_status':401})
 
 
 if __name__=='__main__':unittest.main()

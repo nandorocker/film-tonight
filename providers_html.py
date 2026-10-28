@@ -220,8 +220,13 @@ def parse_kino35(source, venue, day):
             title = _title(_one(tr, 'name'))
             start = _start(published, _text(_one(tr, 'time')))
             booking = _href(_one(tr, 'ticket'), venue)
-            full_date = parse_qs(urlsplit(booking).query).get('perfbegin', [])
-            if len(full_date) != 1 or _instant(full_date[0]) != start:
+            full_date = parse_qs(urlsplit(booking).query, keep_blank_values=True).get('perfbegin', [])
+            # GoOut links carry no datetime; the official row supplies it. Keep
+            # the independent date check for every link that does carry one.
+            if full_date:
+                if len(full_date) != 1 or _instant(full_date[0]) != start:
+                    raise ValueError('Kino35 booking date mismatch')
+            elif urlsplit(booking).hostname != 'goout.net':
                 raise ValueError('Kino35 booking date mismatch')
             audio = [code.strip().lower() for n in _nodes(tr, 'ico-sound') for code in re.split(r'[,/]', _text(n)) if code.strip()]
             subs = [code.strip().lower() for n in _nodes(tr, 'ico-sub') for code in re.split(r'[,/]', _text(n)) if code.strip()]

@@ -141,6 +141,11 @@ English-friendly tags are not relabelled as audio/subtitles. See the skill's rul
 
 - Each venue succeeds or fails independently. Failure and suspicious programme
   collapse preserve last good records and show the latest failed attempt.
+- A green workflow alone does not mean every source succeeded. Inspect the final
+  `outcome` (`complete` or `complete_with_errors`),
+  `failed_venues`, source-error warnings, and API attempt/check timestamps.
+  Startup snapshot reads retry temporary failures and abort before collection if
+  the comparison baseline cannot be fully loaded.
 - Atomic D1 batches replace the whole venue observation. Canonical UTC collection
   generation provides ordering/idempotency; older uploads cannot overwrite newer
   ones. Published dates absent from the new view are unpublished, not invented zero.

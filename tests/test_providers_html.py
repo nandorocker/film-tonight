@@ -100,6 +100,23 @@ class HtmlProvidersTest(unittest.TestCase):
         self.assertTrue(rows[0]['starts_at'].endswith('+02:00'))
         self.assertTrue(rows[1]['starts_at'].endswith('+01:00'))
 
+    def test_kino35_goout_link_uses_official_row_datetime(self):
+        original='http://kino35.koupitvstupenku.cz/?perfbegin=2026-10-24T13%3A30%3A00'
+        booking='https://goout.net/en/example/synthetic/'
+        source=fixture('kino35').replace(original,booking)
+        _,rows=self.parse('kino35',source)
+        self.assertEqual(rows[0]['starts_at'],'2026-10-24T13:30:00+02:00')
+        self.assertEqual(rows[0]['booking_url'],booking)
+        self.assertEqual(rows[0]['audio'],['fr'])
+        self.assertEqual(rows[0]['subtitles'],['en'])
+        for bad in [booking+'?perfbegin=',booking+'?perfbegin=bad',
+                    booking+'?perfbegin=2026-10-25T13%3A30%3A00',
+                    booking+'?perfbegin=2026-10-24T13%3A30%3A00&perfbegin=',
+                    'https://kino35.koupitvstupenku.cz/',
+                    'https://goout.net.example/','https://notgoout.net/']:
+            with self.subTest(booking=bad),self.assertRaises(ValueError):
+                self.parse('kino35',fixture('kino35').replace(original,bad))
+
     def test_edison_arrays_mixed_audio_subtitles_unknown_and_non_film(self):
         dates, rows = self.parse('edison')
         self.assertEqual(dates, {'2026-10-24', '2026-10-25'})
